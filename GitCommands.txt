@@ -1,0 +1,26 @@
+Git komendy
+git init 					– tworzenie repozytorium
+git status 					– pokazuje status
+touch nazwa.tozszerzenie 			– tworzy plik
+git add nazwa.rozszerzenie 			– dodaje pliki untracked do „staging area”
+git commit -m”Wiadomość do commita” 		- wysyła do repozytorium
+git log 						– pokazuje logi commitow
+git add -A 					– dodaje wszystkie pliki untracked do staging
+git commit -am”wiadomość”			- dodaje i commituje wszytkie zmodyfikowane pliki
+
+git branch 					- pokazuje na jakim branch jesteś i jakie są
+git checkout -b”nazwa brancha’a”		-tworzy nowy branch i nas tam przenosi 
+git checkout master(nazwa głównego branch)	-przenosi nas na branch master
+git merge nazwa branch’a 			- łączy aktualny branch z branchem nazwa branch’a
+
+na github komendy na początek aby wskazać repozytorium
+git push 					- wysyła zmiany do repo online
+git pull						-ściąga zmiany z repo online 
+git pull --rebase 				-ściąga zmiany z repo online i modyfikuje repo lokalne jeśli były jakieś zmiany w online i dokłada naszego commita
+git reset --hard				-cofanie się do ostatniego commitu
+git checkout nazwapliku.rozszerzenie 		-cofanie pliku do stanu z ostatniego commitu 
+git merge –abort				-przerywanie mergowania
+git rm -r –cached <plik/folder>			-usunięcie trackowania plików ale tylko z repo nie PC
+
+
+
