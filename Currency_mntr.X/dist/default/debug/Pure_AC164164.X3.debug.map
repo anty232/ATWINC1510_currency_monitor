@@ -1,0 +1,197 @@
+Microchip Technology Inc, v2.10 (B)
+
+Tool Name:
+  c:\spb_data\bin\bin\..\bin/elf-ld.exe
+
+Command:
+  -p24FJ128GA705 \
+  --mdfp=D:/Program Files/packs/Microchip/PIC24F-GA-GB_DFP/1.9.336/xc16 \
+  -o \
+  dist/default/debug/Pure_AC164164.X3.debug.elf \
+  -Lc:/spb_data/bin/bin/.. \
+  -LD:/Program Files/packs/Microchip/PIC24F-GA-GB_DFP/1.9.336/xc16/bin/../support/PIC24F/gld \
+  -Lc:/spb_data/bin/bin/../../lib \
+  -Lc:/spb_data/bin/bin/../../support/PIC24E/gld \
+  -Lc:/spb_data/bin/bin/../../support/PIC24F/gld \
+  -Lc:/spb_data/bin/bin/../../support/PIC24H/gld \
+  -Lc:/spb_data/bin/bin/../../support/dsPIC30F/gld \
+  -Lc:/spb_data/bin/bin/../../support/dsPIC33C/gld \
+  -Lc:/spb_data/bin/bin/../../support/dsPIC33E/gld \
+  -Lc:/spb_data/bin/bin/../../support/dsPIC33F/gld \
+  build/default/debug/mcc_generated_files/ext_int.o \
+  build/default/debug/mcc_generated_files/i2c1.o \
+  build/default/debug/mcc_generated_files/interrupt_manager.o \
+  build/default/debug/mcc_generated_files/mcc.o \
+  build/default/debug/mcc_generated_files/pin_manager.o \
+  build/default/debug/mcc_generated_files/tmr1.o \
+  build/default/debug/mcc_generated_files/traps.o \
+  build/default/debug/mcc_generated_files/uart2.o \
+  build/default/debug/mcc_generated_files/system.o \
+  build/default/debug/mcc_generated_files/clock.o \
+  build/default/debug/mcc_generated_files/spi1.o \
+  build/default/debug/WINC1500/Board_driver/wf_mcu_driver_stub.o \
+  build/default/debug/WINC1500/Driver/wf_asic.o \
+  build/default/debug/WINC1500/Driver/wf_hif.o \
+  build/default/debug/WINC1500/Driver/wf_ota.o \
+  build/default/debug/WINC1500/Driver/wf_socket.o \
+  build/default/debug/WINC1500/Driver/wf_spi.o \
+  build/default/debug/WINC1500/Driver/wf_spi_flash.o \
+  build/default/debug/WINC1500/Driver/wf_utils.o \
+  build/default/debug/WINC1500/Driver/wf_wifi.o \
+  build/default/debug/WINC1500/Example/winc1500_fw_update_over_serial.o \
+  build/default/debug/WINC1500/Example/winc1500_http_download.o \
+  build/default/debug/WINC1500/Example/winc1500_locate_ip_address.o \
+  build/default/debug/WINC1500/Example/winc1500_mac_address.o \
+  build/default/debug/WINC1500/Example/winc1500_mode_ap.o \
+  build/default/debug/WINC1500/Example/winc1500_mode_change.o \
+  build/default/debug/WINC1500/Example/winc1500_mode_p2p.o \
+  build/default/debug/WINC1500/Example/winc1500_mode_sta.o \
+  build/default/debug/WINC1500/Example/winc1500_ota_firmware_update.o \
+  build/default/debug/WINC1500/Example/winc1500_power_save_mode.o \
+  build/default/debug/WINC1500/Example/winc1500_provision_http.o \
+  build/default/debug/WINC1500/Example/winc1500_security_wep_wpa.o \
+  build/default/debug/WINC1500/Example/winc1500_security_wps.o \
+  build/default/debug/WINC1500/Example/winc1500_send_email.o \
+  build/default/debug/WINC1500/Example/winc1500_signal_strength.o \
+  build/default/debug/WINC1500/Example/winc1500_ssl_connect.o \
+  build/default/debug/WINC1500/Example/winc1500_tcp_client.o \
+  build/default/debug/WINC1500/Example/winc1500_tcp_server.o \
+  build/default/debug/WINC1500/Example/winc1500_time_client.o \
+  build/default/debug/WINC1500/Example/winc1500_weather_client.o \
+  build/default/debug/WINC1500/Support/winc1500_support_stub.o \
+  build/default/debug/bsp.o \
+  build/default/debug/main.o \
+  build/default/debug/ST7735_TFT.o \
+  --local-stack \
+  --defsym=__MPLAB_BUILD=1 \
+  --defsym=__MPLAB_DEBUG=1 \
+  --defsym=__DEBUG=1 \
+  --defsym=__MPLAB_DEBUGGER_SIMULATOR=1 \
+  -Tp24FJ128GA705.gld.00 \
+  --stack=16 \
+  --check-sections \
+  --data-init \
+  --pack-data \
+  --handles \
+  --isr \
+  --no-gc-sections \
+  --fill-upper=0 \
+  --stackguard=16 \
+  --no-force-link \
+  --smart-io \
+  -Map=dist/default/debug/Pure_AC164164.X3.debug.map \
+  --report-mem \
+  --memorysummary \
+  dist/default/debug/memoryfile.xml \
+  -start-group \
+  --library=c99-pic30-elf \
+  --library=m-elf \
+  --library=c99-elf \
+  -end-group \
+
+
+Optional library libpPIC24Fxxx.a not found
+Archive member included because of file (symbol)
+
+c:/spb_data/bin/bin/../../lib\libc99-pic30-elf.a(crt0_extended24.o)
+                              (__resetPRI)
+c:/spb_data/bin/bin/../../lib\libc99-pic30-elf.a(data_init_24.o)
+                              c:/spb_data/bin/bin/../../lib\libc99-pic30-elf.a(crt0_extended24.o) (__data_init_da)
+c:/spb_data/bin/bin/../../lib\libc99-pic30-elf.a(crt_start_mode_normalda.Meo)
+                              (__crt_start_mode_normal)
+c:/spb_data/bin/bin/../../lib\libc99-pic30-elf.a(umodsi3.DA_o)
+                              build/default/debug/WINC1500/Driver/wf_spi_flash.o (___umodsi3)
+c:/spb_data/bin/bin/../../lib\libc99-pic30-elf.a(udivsi3.DA_o)
+                              c:/spb_data/bin/bin/../../lib\libc99-pic30-elf.a(umodsi3.DA_o) (___udivsi3)
+c:/spb_data/bin/bin/../../lib\libc99-elf.a(__sio_printf_0.DA_o)
+                              build/default/debug/WINC1500/Example/winc1500_provision_http.o (__printf_0)
+c:/spb_data/bin/bin/../../lib\libc99-elf.a(__sio_printf_dosux.DA_o)
+                              build/default/debug/WINC1500/Driver/wf_wifi.o (__printf_cdnopsuxX)
+c:/spb_data/bin/bin/../../lib\libc99-elf.a(__sio_printf_doux.DA_o)
+                              build/default/debug/WINC1500/Driver/wf_hif.o (__printf_cdnopuxX)
+c:/spb_data/bin/bin/../../lib\libc99-elf.a(__sio_printf_s.DA_o)
+                              build/default/debug/WINC1500/Example/winc1500_provision_http.o (__printf_s)
+c:/spb_data/bin/bin/../../lib\libc99-elf.a(__sio_sprintf_doux.DA_o)
+                              build/default/debug/WINC1500/Driver/wf_utils.o (__sprintf_cdnopuxX)
+c:/spb_data/bin/bin/../../lib\libc99-elf.a(atoi.DA_o)
+                              build/default/debug/WINC1500/Driver/wf_utils.o (_atoi)
+c:/spb_data/bin/bin/../../lib\libc99-elf.a(memcpy.DA_o)
+                              build/default/debug/WINC1500/Driver/wf_asic.o (_memcpy)
+c:/spb_data/bin/bin/../../lib\libc99-elf.a(memset.DA_o)
+                              build/default/debug/WINC1500/Driver/wf_hif.o (_memset)
+c:/spb_data/bin/bin/../../lib\libc99-elf.a(puts.DA_o)
+                              build/default/debug/WINC1500/Driver/wf_asic.o (_puts)
+c:/spb_data/bin/bin/../../lib\libc99-elf.a(stdout.DA_o)
+                              c:/spb_data/bin/bin/../../lib\libc99-elf.a(__sio_printf_0.DA_o) (__stdout)
+c:/spb_data/bin/bin/../../lib\libc99-elf.a(strcpy.DA_o)
+                              build/default/debug/WINC1500/Driver/wf_utils.o (_strcpy)
+c:/spb_data/bin/bin/../../lib\libc99-elf.a(strlen.DA_o)
+                              build/default/debug/WINC1500/Driver/wf_ota.o (_strlen)
+c:/spb_data/bin/bin/../../lib\libc99-elf.a(strtok.DA_o)
+                              build/default/debug/WINC1500/Driver/wf_utils.o (_strtok)
+c:/spb_data/bin/bin/../../lib\libc99-elf.a(__fmt_d.DA_o)
+                              c:/spb_data/bin/bin/../../lib\libc99-elf.a(__sio_printf_dosux.DA_o) (___fmt_d_needed)
+c:/spb_data/bin/bin/../../lib\libc99-elf.a(__fmt_o.DA_o)
+                              c:/spb_data/bin/bin/../../lib\libc99-elf.a(__sio_printf_dosux.DA_o) (___fmt_o_needed)
+c:/spb_data/bin/bin/../../lib\libc99-elf.a(__fmt_s.DA_o)
+                              c:/spb_data/bin/bin/../../lib\libc99-elf.a(__sio_printf_dosux.DA_o) (___fmt_s_needed)
+c:/spb_data/bin/bin/../../lib\libc99-elf.a(__fmt_u.DA_o)
+                              c:/spb_data/bin/bin/../../lib\libc99-elf.a(__fmt_d.DA_o) (___cvt_u)
+c:/spb_data/bin/bin/../../lib\libc99-elf.a(__fmt_x.DA_o)
+                              c:/spb_data/bin/bin/../../lib\libc99-elf.a(__sio_printf_dosux.DA_o) (___fmt_x_needed)
+c:/spb_data/bin/bin/../../lib\libc99-elf.a(__int_vfprintf.DA_o)
+                              c:/spb_data/bin/bin/../../lib\libc99-elf.a(__sio_printf_0.DA_o) (___vfprintf)
+c:/spb_data/bin/bin/../../lib\libc99-elf.a(__int_vsprintf.DA_o)
+                              c:/spb_data/bin/bin/../../lib\libc99-elf.a(__sio_sprintf_doux.DA_o) (___vsprintf)
+c:/spb_data/bin/bin/../../lib\libc99-elf.a(__io_init_needed.DA_o)
+                              c:/spb_data/bin/bin/../../lib\libc99-elf.a(stdout.DA_o) (___io_init_needed)
+c:/spb_data/bin/bin/../../lib\libc99-elf.a(__out.DA_o)
+                              c:/spb_data/bin/bin/../../lib\libc99-elf.a(stdout.DA_o) (___stdio_write_unbuffered)
+c:/spb_data/bin/bin/../../lib\libc99-elf.a(__pop_int.DA_o)
+                              c:/spb_data/bin/bin/../../lib\libc99-elf.a(__sio_printf_dosux.DA_o) (___pop_int_needed)
+c:/spb_data/bin/bin/../../lib\libc99-elf.a(__pop_ptr.DA_o)
+                              c:/spb_data/bin/bin/../../lib\libc99-elf.a(__sio_printf_dosux.DA_o) (___pop_ptr_needed)
+c:/spb_data/bin/bin/../../lib\libc99-elf.a(__printf_core.DA_o)
+                              c:/spb_data/bin/bin/../../lib\libc99-elf.a(__fmt_d.DA_o) (___pad)
+c:/spb_data/bin/bin/../../lib\libc99-elf.a(__stdio_close.DA_o)
+                              c:/spb_data/bin/bin/../../lib\libc99-elf.a(stdout.DA_o) (___stdio_close_rw)
+c:/spb_data/bin/bin/../../lib\libc99-elf.a(fputs.DA_o)
+                              c:/spb_data/bin/bin/../../lib\libc99-elf.a(puts.DA_o) (_fputs)
+c:/spb_data/bin/bin/../../lib\libc99-elf.a(fwrite.DA_o)
+                              c:/spb_data/bin/bin/../../lib\libc99-elf.a(fputs.DA_o) (_fwrite)
+c:/spb_data/bin/bin/../../lib\libc99-elf.a(lseek.DA_o)
+                              c:/spb_data/bin/bin/../../lib\libc99-elf.a(__stdio_close.DA_o) (_lseek)
+c:/spb_data/bin/bin/../../lib\libc99-elf.a(putc.DA_o)
+                              c:/spb_data/bin/bin/../../lib\libc99-elf.a(puts.DA_o) (_putc_unlocked)
+c:/spb_data/bin/bin/../../lib\libc99-elf.a(stpcpy.DA_o)
+                              c:/spb_data/bin/bin/../../lib\libc99-elf.a(strcpy.DA_o) (___stpcpy)
+c:/spb_data/bin/bin/../../lib\libc99-elf.a(strcspn.DA_o)
+                              c:/spb_data/bin/bin/../../lib\libc99-elf.a(strtok.DA_o) (_strcspn)
+c:/spb_data/bin/bin/../../lib\libc99-elf.a(strspn.DA_o)
+                              c:/spb_data/bin/bin/../../lib\libc99-elf.a(strtok.DA_o) (_strspn)
+c:/spb_data/bin/bin/../../lib\libc99-elf.a(syscall_ret.DA_o)
+                              c:/spb_data/bin/bin/../../lib\libc99-elf.a(lseek.DA_o) (___syscall_ret)
+c:/spb_data/bin/bin/../../lib\libc99-elf.a(tolower.DA_o)
+                              c:/spb_data/bin/bin/../../lib\libc99-elf.a(__printf_core.DA_o) (_tolower)
+c:/spb_data/bin/bin/../../lib\libc99-elf.a(toupper.DA_o)
+                              c:/spb_data/bin/bin/../../lib\libc99-elf.a(__fmt_x.DA_o) (_toupper)
+c:/spb_data/bin/bin/../../lib\libc99-elf.a(__errno_location.DA_o)
+                              c:/spb_data/bin/bin/../../lib\libc99-elf.a(__printf_core.DA_o) (___errno_val)
+c:/spb_data/bin/bin/../../lib\libc99-elf.a(__init_stdio.DA_o)
+                              c:/spb_data/bin/bin/../../lib\libc99-elf.a(__io_init_needed.DA_o) (___init_stdio_needed)
+c:/spb_data/bin/bin/../../lib\libc99-elf.a(__int_vsnprintf.DA_o)
+                              c:/spb_data/bin/bin/../../lib\libc99-elf.a(__int_vsprintf.DA_o) (___vsnprintf)
+c:/spb_data/bin/bin/../../lib\libc99-elf.a(__io_file_needed.DA_o)
+                              c:/spb_data/bin/bin/../../lib\libc99-elf.a(__io_init_needed.DA_o) (___io_file_needed)
+c:/spb_data/bin/bin/../../lib\libc99-elf.a(__pop_float.DA_o)
+                              c:/spb_data/bin/bin/../../lib\libc99-elf.a(__printf_core.DA_o) (___pop_float)
+c:/spb_data/bin/bin/../../lib\libc99-elf.a(strchrnul.DA_o)
+                              c:/spb_data/bin/bin/../../lib\libc99-elf.a(strcspn.DA_o) (___strchrnul)
+c:/spb_data/bin/bin/../../lib\libc99-pic30-elf.a(extendsfdf.DA_o)
+                              c:/spb_data/bin/bin/../../lib\libc99-elf.a(__pop_float.DA_o) (___extendsfdf2)
+c:/spb_data/bin/bin/../../lib\libc99-pic30-elf.a(funpack.DA_o)
+                              c:/spb_data/bin/bin/../../lib\libc99-pic30-elf.a(extendsfdf.DA_o) (__funpack)
+c:/spb_data/bin/bin/../../lib\libc99-pic30-elf.a(mulsi3.DA_o)
+                              c:/spb_data/bin/bin/../../lib\libc99-elf.a(memset.DA_o) (___mulsi3)
+c:/spb_data/bin/bin/../../lib\libc99-pic30-elf.a(divmoddi3.DA_o)
+                              c:/spb_data/bin/bin/../../lib\libc99-elf.a(__fmt_u.DA_o) (___udivdi3)

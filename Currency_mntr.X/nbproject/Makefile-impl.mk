@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=Currency_mntr.X
+PROJECTNAME=Pure_AC164164.X3
 
 # Active Configuration
 DEFAULTCONF=default

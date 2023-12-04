@@ -3,12 +3,21 @@
     <type>com.microchip.mplab.nbide.embedded.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>Currency_mntr</name>
-            <creation-uuid>c1bba65c-7990-4430-93ef-43333a35e87a</creation-uuid>
+            <name>Pure_AC164164</name>
+            <creation-uuid>808b33ac-4811-4a90-a34f-f5b83346f11e</creation-uuid>
             <make-project-type>0</make-project-type>
+            <c-extensions>c</c-extensions>
+            <cpp-extensions/>
+            <header-extensions>h</header-extensions>
+            <asminc-extensions/>
             <sourceEncoding>ISO-8859-1</sourceEncoding>
             <make-dep-projects/>
-            <sourceRootList/>
+            <sourceRootList>
+                <sourceRootElem>.</sourceRootElem>
+                <sourceRootElem>../Biblioteka/FT800-FT813-5.x</sourceRootElem>
+                <sourceRootElem>../Biblioteka/pic-st7735-main/include</sourceRootElem>
+                <sourceRootElem>../Biblioteka/pic-st7735-main/lib</sourceRootElem>
+            </sourceRootList>
             <confList>
                 <confElem>
                     <name>default</name>
