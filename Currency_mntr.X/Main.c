@@ -50,9 +50,10 @@
 #include "mcc_generated_files/system.h"
 #include "xc.h"
 #include "spi1.h"
-#include "ST7735_TFT.c"
+#include "ST7735.h"
 #include "pin_manager.h"
 #include "delay.h"
+#include <stdio.h>
 
 
 uint8_t k = 0;
@@ -205,7 +206,7 @@ int main(void)
   drawFastHLine(0, 53, _width,  ST7735_WHITE);
   drawFastHLine(0, 106, _width, ST7735_WHITE);
   while(k++ < 20){
-    sprintf(txt,"%02u",k);
+    printf(txt,"%02u",k);
     drawtext(59, 25, txt,  ST7735_GREEN, ST7735_BLACK, 1);
     drawtext(54, 75, txt,  ST7735_BLUE,  ST7735_BLACK, 2);
     drawtext(49, 125, txt, ST7735_RED,  ST7735_BLACK, 3);

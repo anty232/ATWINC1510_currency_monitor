@@ -83,5 +83,5 @@ extern "C" {
 #define __DELAY_H
 
 #include <stdint.h>
-void delay_ms(uint8_t count);
+void delay_ms(int16_t count);
 #endif

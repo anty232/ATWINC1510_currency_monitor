@@ -45,6 +45,7 @@
       </logicalFolder>
       <itemPath>bsp.h</itemPath>
       <itemPath>delay.h</itemPath>
+      <itemPath>ST7735.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -112,7 +113,7 @@
       </logicalFolder>
       <itemPath>bsp.c</itemPath>
       <itemPath>main.c</itemPath>
-      <itemPath>ST7735_TFT.c</itemPath>
+      <itemPath>ST7735.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
