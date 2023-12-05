@@ -1,2 +1,4 @@
 **/.generated_files
 **/dist
+**/nbproject/*.mk
+**/nbproject/*.properties
