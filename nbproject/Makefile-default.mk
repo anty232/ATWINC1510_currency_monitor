@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=main.c C:/Users/user/Desktop/ST7735/ST7735_TFT.c
+SOURCEFILES_QUOTED_IF_SPACED=main.c ST7735_TFT.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.o ${OBJECTDIR}/_ext/1562742247/ST7735_TFT.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/main.o.d ${OBJECTDIR}/_ext/1562742247/ST7735_TFT.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.o ${OBJECTDIR}/ST7735_TFT.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/main.o.d ${OBJECTDIR}/ST7735_TFT.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/main.o ${OBJECTDIR}/_ext/1562742247/ST7735_TFT.o
+OBJECTFILES=${OBJECTDIR}/main.o ${OBJECTDIR}/ST7735_TFT.o
 
 # Source Files
-SOURCEFILES=main.c C:/Users/user/Desktop/ST7735/ST7735_TFT.c
+SOURCEFILES=main.c ST7735_TFT.c
 
 
 
@@ -89,30 +89,30 @@ MP_LINKER_FILE_OPTION=,--script=p24FJ128GA705.gld
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: compile
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/main.o: main.c  .generated_files/flags/default/6f3fb5b43333c26790e2d28667c3011c638aaef7 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/main.o: main.c  .generated_files/flags/default/eff9ee04e7d307a52453265e5757f67d23c624f .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/main.o.d 
 	@${RM} ${OBJECTDIR}/main.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  main.c  -o ${OBJECTDIR}/main.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/main.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1  -mno-eds-warn  -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/_ext/1562742247/ST7735_TFT.o: C:/Users/user/Desktop/ST7735/ST7735_TFT.c  .generated_files/flags/default/d5492c983beadf12493c144e345bc2eb3b9d9cd1 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}/_ext/1562742247" 
-	@${RM} ${OBJECTDIR}/_ext/1562742247/ST7735_TFT.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1562742247/ST7735_TFT.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  C:/Users/user/Desktop/ST7735/ST7735_TFT.c  -o ${OBJECTDIR}/_ext/1562742247/ST7735_TFT.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/1562742247/ST7735_TFT.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1  -mno-eds-warn  -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+${OBJECTDIR}/ST7735_TFT.o: ST7735_TFT.c  .generated_files/flags/default/cb30b795e5360d489567341580d3b68ad19690df .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/ST7735_TFT.o.d 
+	@${RM} ${OBJECTDIR}/ST7735_TFT.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ST7735_TFT.c  -o ${OBJECTDIR}/ST7735_TFT.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/ST7735_TFT.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1  -mno-eds-warn  -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
 else
-${OBJECTDIR}/main.o: main.c  .generated_files/flags/default/1c1f981861b669690c7637e18e4eb03ccb26e3f8 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/main.o: main.c  .generated_files/flags/default/13acd62112d137360681fa37dbf23b71af62d22e .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/main.o.d 
 	@${RM} ${OBJECTDIR}/main.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  main.c  -o ${OBJECTDIR}/main.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/main.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/_ext/1562742247/ST7735_TFT.o: C:/Users/user/Desktop/ST7735/ST7735_TFT.c  .generated_files/flags/default/7f124b29eaee17af1406becf7062cf8a36bf394d .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}/_ext/1562742247" 
-	@${RM} ${OBJECTDIR}/_ext/1562742247/ST7735_TFT.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1562742247/ST7735_TFT.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  C:/Users/user/Desktop/ST7735/ST7735_TFT.c  -o ${OBJECTDIR}/_ext/1562742247/ST7735_TFT.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/1562742247/ST7735_TFT.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+${OBJECTDIR}/ST7735_TFT.o: ST7735_TFT.c  .generated_files/flags/default/b94a0faf9a9d3b56965d00c6111c40f2dd2a3006 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/ST7735_TFT.o.d 
+	@${RM} ${OBJECTDIR}/ST7735_TFT.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ST7735_TFT.c  -o ${OBJECTDIR}/ST7735_TFT.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/ST7735_TFT.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
 endif
 

@@ -11,6 +11,7 @@
             <sourceRootList>
                 <sourceRootElem>C:\Users\user\Desktop\Studia\Semestr5\Aplikacje_Mikrokontrolerow\ATWINC1510_currency_monitor\mcc_generated_files</sourceRootElem>
                 <sourceRootElem>C:\Users\user\Desktop\ST7735</sourceRootElem>
+                <sourceRootElem>.</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>
