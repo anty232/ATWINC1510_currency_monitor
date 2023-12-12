@@ -15,7 +15,7 @@
 #define ST7735_TFT_H
 
 #include <string.h>
-#include "mcc_generated_files/mcc.h"
+//#include "mcc_generated_files/mcc.h"
 
 
 // ******** USER OPTION 4 SPI TYPE ***********

@@ -13,6 +13,7 @@
 
 
 #include "ST7735_TFT.h"
+#include "mcc_generated_files/pin_manager.h"
 #include "ST7735_TFT_Font.h"
 
 // ********* Variables  **********
