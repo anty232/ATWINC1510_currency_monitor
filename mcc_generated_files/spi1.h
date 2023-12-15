@@ -51,6 +51,7 @@
 */
 
 #include <xc.h>
+#include "pin_manager.h"
 #include <stdint.h>
 #include <stdbool.h>
 #include <stddef.h>
@@ -247,6 +248,10 @@ uint16_t SPI1_Exchange8bitBuffer(uint8_t *dataTransmitted, uint16_t byteCount, u
 SPI1_STATUS SPI1_StatusGet(void);
 
 
+
+
+
+
 #ifdef __cplusplus  // Provide C++ Compatibility
 
     }
@@ -255,6 +260,8 @@ SPI1_STATUS SPI1_StatusGet(void);
 
 #endif //_SPI1_H
     
+    
+
 /*******************************************************************************
  End of File
 */

@@ -1,63 +1,35 @@
-/**
-  Generated main.c file from MPLAB Code Configurator
 
-  @Company
-    Microchip Technology Inc.
-
-  @File Name
-    main.c
-
-  @Summary
-    This is the generated main.c using PIC24 / dsPIC33 / PIC32MM MCUs.
-
-  @Description
-    This source file provides main entry point for system initialization and application code development.
-    Generation Information :
-        Product Revision  :  PIC24 / dsPIC33 / PIC32MM MCUs - 1.171.4
-        Device            :  PIC24FJ128GA705
-    The generated drivers are tested against the following:
-        Compiler          :  XC16 v2.10
-        MPLAB 	          :  MPLAB X v6.05
-*/
-
-/*
-    (c) 2020 Microchip Technology Inc. and its subsidiaries. You may use this
-    software and any derivatives exclusively with Microchip products.
-
-    THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER
-    EXPRESS, IMPLIED OR STATUTORY, APPLY TO THIS SOFTWARE, INCLUDING ANY IMPLIED
-    WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND FITNESS FOR A
-    PARTICULAR PURPOSE, OR ITS INTERACTION WITH MICROCHIP PRODUCTS, COMBINATION
-    WITH ANY OTHER PRODUCTS, OR USE IN ANY APPLICATION.
-
-    IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE,
-    INCIDENTAL OR CONSEQUENTIAL LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND
-    WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF MICROCHIP HAS
-    BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE. TO THE
-    FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN
-    ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
-    THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
-
-    MICROCHIP PROVIDES THIS SOFTWARE CONDITIONALLY UPON YOUR ACCEPTANCE OF THESE
-    TERMS.
-*/
-
-/**
-  Section: Included Files
-*/
 #include "mcc_generated_files/system.h"
+#include "mcc_generated_files/spi1.h"
+#include "ST7735_TFT_BLACK.h"
 
-/*
-                         Main application
- */
+    uint8_t data1 = 0x21;
+    uint8_t data2 = 0x37;
+    uint8_t recived;
+    uint8_t recived2;
+   // SPI1_STATUS status;
+    uint8_t OFFSET_COL = 0;  // 2, These offsets can be adjusted for any issues->
+	uint8_t OFFSET_ROW = 0 ; // 3, with manufacture tolerance/defects
+	uint8_t TFT_PIXEL_WIDTH = 128;// Screen width in pixels
+	uint8_t TFT_PIXEL_HEIGHT = 160; // Screen height in pixels
+    
 int main(void)
 {
     // initialize the device
     SYSTEM_Initialize();
-
+    TFTBlackTabInitialize();
+   
+    
+	TFTInitScreenSize(OFFSET_COL, OFFSET_ROW , TFT_PIXEL_WIDTH  , TFT_PIXEL_HEIGHT);
+    
     while (1)
-    {
-        // Add your application code
+    {   
+        
+        TFTfillScreen(ST7735_MAGENTA);
+        
+        TFTdrawPixel(10, 10, ST7735_BLACK);
+        TFTdrawFastVLine(50, 50, 50, ST7735_BLACK);
+        Nop();
     }
 
     return 1;

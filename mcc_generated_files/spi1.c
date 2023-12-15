@@ -85,8 +85,8 @@ void SPI1_Initialize (void)
     SPI1CON2L = 0x00;
     // SPIROV disabled; FRMERR disabled; 
     SPI1STATL = 0x00;
-    // SPI1BRGL 0; 
-    SPI1BRGL = 0x00;
+    // SPI1BRGL 19; 
+    SPI1BRGL = 0x13;
     // SPITBFEN disabled; SPITUREN disabled; FRMERREN disabled; SRMTEN disabled; SPIRBEN disabled; BUSYEN disabled; SPITBEN disabled; SPIROVEN disabled; SPIRBFEN disabled; 
     SPI1IMSKL = 0x00;
     // RXMSK 0; TXWIEN disabled; TXMSK 0; RXWIEN disabled; 
@@ -95,8 +95,8 @@ void SPI1_Initialize (void)
     SPI1URDTL = 0x00;
     // SPI1URDTH 0; 
     SPI1URDTH = 0x00;
-    // SPIEN enabled; DISSDO disabled; MCLKEN FOSC/2; CKP Idle:Low, Active:High; SSEN disabled; MSTEN Master; MODE16 disabled; SMP Middle; DISSCK disabled; SPIFE Frame Sync pulse precedes; CKE Idle to Active; MODE32 disabled; SPISIDL disabled; ENHBUF enabled; DISSDI disabled; 
-    SPI1CON1L = 0x8021;
+    // SPIEN enabled; DISSDO disabled; MCLKEN FOSC/2; CKP Idle:Low, Active:High; SSEN disabled; MSTEN Master; MODE16 disabled; SMP Middle; DISSCK disabled; SPIFE Frame Sync pulse precedes; CKE Active to Idle; MODE32 disabled; SPISIDL disabled; ENHBUF enabled; DISSDI disabled; 
+    SPI1CON1L = 0x8121;
 
 }
 
@@ -207,6 +207,8 @@ uint8_t SPI1_Exchange8bit( uint8_t data )
 
     return (receiveData);
 }
+
+
 
 
 uint16_t SPI1_Exchange8bitBuffer(uint8_t *dataTransmitted, uint16_t byteCount, uint8_t *dataReceived)
