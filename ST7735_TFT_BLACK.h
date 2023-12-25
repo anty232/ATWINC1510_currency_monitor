@@ -21,6 +21,28 @@
 extern "C" {
 #endif
 
+typedef enum 
+{
+	TFTFont_Default = 1,
+	TFTFont_Thick = 2,
+	TFTFont_Seven_Seg = 3,
+	TFTFont_Wide = 4,
+	TFTFont_Tiny = 5,
+    TFTFont_Homespun = 6
+}ST7735_FontType_e; // Font type 1-6
+
+typedef enum 
+{
+	TFTFont_width_3 = 3, 
+	TFTFont_width_5 = 5, 
+	TFTFont_width_7 = 7, 
+	TFTFont_width_4 = 4, 
+	TFTFont_width_8 = 8,
+	TFTFont_width_16= 16
+}ST7735_Font_width_e; // width of the font in bytes, cols.
+
+    
+    
 void TFTwriteData(uint8_t data);
 void TFTwriteCommand(uint8_t cmd);
 void TFTspiWriteBuffer(uint8_t* spidata, size_t len);
@@ -45,6 +67,11 @@ void TFTdrawRoundRect(uint8_t x, uint8_t y, uint8_t w, uint8_t h, uint8_t r, uin
 void TFTfillRoundRect(uint8_t x, uint8_t y, uint8_t w, uint8_t h, uint8_t r, uint16_t color);
 void TFTdrawTriangle(int16_t x0, int16_t y0, int16_t x1, int16_t y1, int16_t x2, int16_t y2, uint16_t color);
 void TFTfillTriangle(int16_t x0, int16_t y0, int16_t x1, int16_t y1, int16_t x2, int16_t y2, uint16_t color);
+void TFTdrawChar(uint8_t x, uint8_t y, uint8_t c, uint16_t color, uint16_t bg, uint8_t size);
+void TFTsetTextWrap(bool w);
+void TFTdrawText(uint8_t x, uint8_t y, char *_text, uint16_t color, uint16_t bg, uint8_t size);
+void TFTFontNum(ST7735_FontType_e FontNumber);
+
 
 
 // ******** ST7735 registers ********
@@ -125,6 +152,8 @@ void TFTfillTriangle(int16_t x0, int16_t y0, int16_t x1, int16_t y1, int16_t x2,
 #define   ST7735_ORANGE  0xF100
 
 #define _swap_TFT(a, b) { int16_t t; t = a; a = b; b = t;}
+
+
 
 #ifdef	__cplusplus
 }

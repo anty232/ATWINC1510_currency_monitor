@@ -4,6 +4,7 @@
 #include "mcc_generated_files/spi1.h"
 
 
+uint8_t _TFTFontNumber = TFTFont_Default ;
 uint8_t _TFTCurrentFontWidth = 5;
 bool _TFTwrap = true;
 
@@ -528,3 +529,108 @@ void TFTfillTriangle(int16_t x0, int16_t y0, int16_t x1, int16_t y1, int16_t x2,
     }
 }
 
+void TFTdrawChar(uint8_t x, uint8_t y, uint8_t c, uint16_t color, uint16_t bg, uint8_t size) {
+    const uint8_t ASCIIOffset = 0x20;
+    uint8_t i, j;
+    
+    if ((x >= _widthTFT) || (y >= _heightTFT))
+        return;
+    if (size < 1) size = 1;
+    if ((c < ' ') || (c > '~'))
+        c = '?';
+    for (i = 0; i < _TFTCurrentFontWidth; i++) {
+        uint8_t line;
+        switch (_TFTFontNumber) {
+            case 1:
+#ifdef TFT_Font_Default
+                line = pFontDefaultptr[(c - ASCIIOffset) * _TFTCurrentFontWidth + i];            
+#endif
+                break;
+            case 2:
+#ifdef TFT_Font_Thick
+                line = pFontThickptr[(c - ASCIIOffset) * _TFTCurrentFontWidth + i];
+#endif
+                break;
+            case 3:
+#ifdef TFT_Font_SevenSeg
+                line = pFontSevenptr[(c - ASCIIOffset) * _TFTCurrentFontWidth + i];
+#endif
+                break;
+            case 4:
+#ifdef TFT_Font_Wide
+                line = pFontWideptr[(c - ASCIIOffset) * _TFTCurrentFontWidth + i];
+#endif
+                break;
+            case 5:
+#ifdef TFT_Font_Tiny
+                line = pFontTinyptr[(c - ASCIIOffset) * _TFTCurrentFontWidth + i];
+#endif
+                break;
+            case 6:
+#ifdef TFT_Font_HomeSpun
+                line = pFontHomeptr[(c - ASCIIOffset) * _TFTCurrentFontWidth + i];
+#endif
+                break;
+        }
+        for (j = 0; j < 7; j++, line >>= 1) {
+            if (line & 0x01) {
+                if (size == 1) TFTdrawPixel(x + i, y + j, color);
+                else TFTfillRect(x + (i * size), y + (j * size), size, size, color);
+            } else if (bg != color) {
+                if (size == 1) TFTdrawPixel(x + i, y + j, bg);
+                else TFTfillRect(x + i*size, y + j*size, size, size, bg);
+            }
+        }
+    }
+}
+
+
+void TFTsetTextWrap(bool w) {
+    _TFTwrap = w;
+}
+
+// Desc: Writes text (*text) on the TFT at coordinates (x, y). size: text size.
+
+void TFTdrawText(uint8_t x, uint8_t y, char *_text, uint16_t color, uint16_t bg, uint8_t size) {
+    uint8_t cursor_x, cursor_y;
+    uint16_t textsize, i;
+    cursor_x = x, cursor_y = y;
+    textsize = strlen(_text);
+    for (i = 0; i < textsize; i++) {
+        if (_TFTwrap && ((cursor_x + size * _TFTCurrentFontWidth) > _widthTFT)) {
+            cursor_x = 0;
+            cursor_y = cursor_y + size * 7 + 3;
+            if (cursor_y > _heightTFT) cursor_y = _heightTFT;
+            if (_text[i] == 0x20) goto _skip;
+        }
+        TFTdrawChar(cursor_x, cursor_y, _text[i], color, bg, size);
+        cursor_x = cursor_x + size * (_TFTCurrentFontWidth + 1);
+        if (cursor_x > _widthTFT) cursor_x = _widthTFT;
+_skip:
+        ;
+    }
+}
+
+//  Desc :  Set the font number
+// Param1: fontnumber 1-6 enum ST7735_FontType_e
+// 1=default 2=thick 3=seven segment 4=wide 5=tiny 6=homespun
+// Fonts must be enabled at top of header file.
+void TFTFontNum(ST7735_FontType_e FontNumber) {
+
+   _TFTFontNumber = FontNumber;
+
+    switch (_TFTFontNumber ) {
+        case TFTFont_Default: _TFTCurrentFontWidth = TFTFont_width_5;
+            break; // Norm default 5 by 8
+        case TFTFont_Thick: _TFTCurrentFontWidth = TFTFont_width_7;
+            break; //Thick 7 by 8 (NO LOWERCASE LETTERS)
+        case TFTFont_Seven_Seg: _TFTCurrentFontWidth = TFTFont_width_4;
+            break; //Seven segment 4 by 8
+        case TFTFont_Wide: _TFTCurrentFontWidth = TFTFont_width_8;
+            break; // Wide  8 by 8 (NO LOWERCASE LETTERS)
+        case TFTFont_Tiny: _TFTCurrentFontWidth = TFTFont_width_3;
+            break; //Tiny 3 by 8
+        case TFTFont_Homespun: _TFTCurrentFontWidth = TFTFont_width_7;
+            break; //homespun 7 by 8 
+    }
+}

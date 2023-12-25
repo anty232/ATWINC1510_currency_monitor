@@ -4,13 +4,13 @@ Tool Name:
   c:\program files\microchip\xc16\v2.10\bin\bin\..\bin/elf-ld.exe
 
 Command:
-  -TC:\\Users\\kslig\\AppData\\Local\\Temp\\tmp000017f8.00 \
-  -TC:\\Users\\kslig\\AppData\\Local\\Temp\\tmp000017f8.01 \
-  -TC:\\Users\\kslig\\AppData\\Local\\Temp\\tmp000017f8.02 \
-  -TC:\\Users\\kslig\\AppData\\Local\\Temp\\tmp000017f8.03 \
-  -TC:\\Users\\kslig\\AppData\\Local\\Temp\\tmp000017f8.04 \
-  -TC:\\Users\\kslig\\AppData\\Local\\Temp\\tmp000017f8.05 \
-  -TC:\\Users\\kslig\\AppData\\Local\\Temp\\tmp000017f8.06 \
+  -TC:\\Users\\kslig\\AppData\\Local\\Temp\\tmp000043bc.00 \
+  -TC:\\Users\\kslig\\AppData\\Local\\Temp\\tmp000043bc.01 \
+  -TC:\\Users\\kslig\\AppData\\Local\\Temp\\tmp000043bc.02 \
+  -TC:\\Users\\kslig\\AppData\\Local\\Temp\\tmp000043bc.03 \
+  -TC:\\Users\\kslig\\AppData\\Local\\Temp\\tmp000043bc.04 \
+  -TC:\\Users\\kslig\\AppData\\Local\\Temp\\tmp000043bc.05 \
+  -TC:\\Users\\kslig\\AppData\\Local\\Temp\\tmp000043bc.06 \
   -p24FJ128GA705 \
   --mdfp=C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC24F-GA-GB_DFP/1.9.336/xc16 \
   -o \
@@ -71,6 +71,8 @@ c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(data_
                               c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(crt0_extended24.o) (__data_init_da)
 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(crt_start_mode_normalda.Meo)
                               (__crt_start_mode_normal)
+c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(strlen.DA_o)
+                              build/default/debug/ST7735_TFT_BLACK.o (_strlen)
 
 
 Selected CodeGuard Options:
@@ -104,13 +106,13 @@ Default Scalar Model: Small
 
 section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
-.text                        0x100               0x1ac           0x282  (642)
-.const                       0x2ac               0xab6          0x1011  (4113)
-.text                        0xd62              0x101a          0x1827  (6183)
-.dinit                      0x1d7c                0x3c            0x5a  (90)
-.text                       0x1db8                0x5e            0x8d  (141)
+.text                        0x100               0x1dc           0x2ca  (714)
+.const                       0x2dc               0xab6          0x1011  (4113)
+.text                        0xd92              0x133a          0x1cd7  (7383)
+.dinit                      0x20cc                0x3e            0x5d  (93)
+.text                       0x210a                0x5e            0x8d  (141)
 
-                 Total "program" memory used (bytes):         0x2ba1  (11169) 8%
+                 Total "program" memory used (bytes):         0x309c  (12444) 9%
 
 
 "data" Memory  [Origin = 0x800, Length = 0x4000]
@@ -129,10 +131,10 @@ reserve_data_0x82a           0x82a                0x26            0x26  (38)
 .nbss                        0x85c                   0             0xa  (10)
 .ndata                       0x866                   0             0x4  (4)
 .nbss                        0x86a                   0             0x4  (4)
-.ndata                       0x86e                   0             0x2  (2)
-.bss                         0x870                   0            0x20  (32)
+.ndata                       0x86e                   0             0x4  (4)
+.bss                         0x872                   0            0x20  (32)
 
-                 Total "data" memory used (bytes):           0x90  (144) <1%
+                 Total "data" memory used (bytes):           0x92  (146) <1%
 
 
 Dynamic Memory Usage
@@ -140,9 +142,9 @@ Dynamic Memory Usage
 region                     address                      maximum length  (dec)
 ------                     -------                      ---------------------
 heap                             0                                   0  (0)
-stack                        0x890                              0x3f70  (16240)
+stack                        0x892                              0x3f6e  (16238)
 
-                 Maximum dynamic memory (bytes):         0x3f70  (16240)
+                 Maximum dynamic memory (bytes):         0x3f6e  (16238)
 
 Info: Project is using a large data memory model when small data memory model is sufficient.
 
@@ -173,8 +175,9 @@ External Symbols in Data Memory (by address):
                     0x086b                  _recived2
                     0x086c                  _OFFSET_COL
                     0x086d                  _OFFSET_ROW
-                    0x086e                  __TFTCurrentFontWidth
-                    0x086f                  __TFTwrap
+                    0x086e                  __TFTFontNumber
+                    0x086f                  __TFTCurrentFontWidth
+                    0x0870                  __TFTwrap
 
 External Symbols in Data Memory (by name):
 
@@ -182,12 +185,13 @@ External Symbols in Data Memory (by name):
                     0x086d                  _OFFSET_ROW
                     0x0869                  _TFT_PIXEL_HEIGHT
                     0x0868                  _TFT_PIXEL_WIDTH
-                    0x086e                  __TFTCurrentFontWidth
+                    0x086f                  __TFTCurrentFontWidth
+                    0x086e                  __TFTFontNumber
                     0x085c                  __TFTType
                     0x085e                  __TFTcolstart
                     0x085d                  __TFTrotation
                     0x085f                  __TFTrowstart
-                    0x086f                  __TFTwrap
+                    0x0870                  __TFTwrap
                     0x0860                  __TFTxstart
                     0x0861                  __TFTystart
                     0x0865                  __heightStartTFT
@@ -217,88 +221,97 @@ External Symbols in Program Memory (by address):
                   0x000266                  __MathError
                   0x000286                  __NVMError
                   0x0002a6                  __DefaultInterrupt
-                  0x000d62                  ___delay_ms
-                  0x000d8e                  _TFTwriteData
-                  0x000da0                  _TFTwriteCommand
-                  0x000db2                  _TFTspiWriteBuffer
-                  0x000dca                  _TFTspiWriteByte
-                  0x000de0                  _TFTResetPIN
-                  0x000dfa                  _TFTBcmd
-                  0x000eec                  _TFTRcmd1
-                  0x000f98                  _TFTRcmd2red
-                  0x000fd2                  _TFTRcmd3
-                  0x00100c                  _TFTBlackTabInitialize
-                  0x00102a                  _TFTsetAddrWindow
-                  0x00107c                  _TFTdrawPixel
-                  0x0010c0                  _TFTdrawFastVLine
-                  0x001146                  _TFTfillRectangle
-                  0x001208                  _TFTfillScreen
-                  0x001222                  _TFTInitScreenSize
-                  0x001260                  _TFTdrawFastHLine
-                  0x0012e6                  _TFTdrawCircle
-                  0x0013f2                  _TFTdrawCircleHelper
-                  0x0014f6                  _TFTfillCircleHelper
-                  0x0015d0                  _TFTfillCircle
-                  0x001602                  _TFTdrawRectWH
-                  0x00165a                  _TFTdrawLine
-                  0x001738                  _TFTfillRect
-                  0x001772                  _TFTdrawRoundRect
-                  0x0018a4                  _TFTfillRoundRect
-                  0x00193a                  _TFTdrawTriangle
-                  0x001972                  _TFTfillTriangle
-                  0x001b70                  _SPI1_Initialize
-                  0x001b8c                  _SPI1_Exchange
-                  0x001bbc                  _SPI1_ExchangeBuffer
-                  0x001c86                  _SPI1_Exchange8bit
-                  0x001c96                  _SPI1_Exchange8bitBuffer
-                  0x001caa                  _SPI1_StatusGet
-                  0x001cb2                  _PIN_MANAGER_Initialize
-                  0x001d36                  _CLOCK_Initialize
-                  0x001db8                  _main
-                  0x001e02                  _SYSTEM_Initialize
-                  0x001e10                  _INTERRUPT_Initialize
+                  0x0002ac                  _strlen
+                  0x000d92                  ___delay_ms
+                  0x000dbe                  _TFTwriteData
+                  0x000dd0                  _TFTwriteCommand
+                  0x000de2                  _TFTspiWriteBuffer
+                  0x000dfa                  _TFTspiWriteByte
+                  0x000e10                  _TFTResetPIN
+                  0x000e2a                  _TFTBcmd
+                  0x000f1c                  _TFTRcmd1
+                  0x000fc8                  _TFTRcmd2red
+                  0x001002                  _TFTRcmd3
+                  0x00103c                  _TFTBlackTabInitialize
+                  0x00105a                  _TFTsetAddrWindow
+                  0x0010ac                  _TFTdrawPixel
+                  0x0010f0                  _TFTdrawFastVLine
+                  0x001176                  _TFTfillRectangle
+                  0x001238                  _TFTfillScreen
+                  0x001252                  _TFTInitScreenSize
+                  0x001290                  _TFTdrawFastHLine
+                  0x001316                  _TFTdrawCircle
+                  0x001422                  _TFTdrawCircleHelper
+                  0x001526                  _TFTfillCircleHelper
+                  0x001600                  _TFTfillCircle
+                  0x001632                  _TFTdrawRectWH
+                  0x00168a                  _TFTdrawLine
+                  0x001768                  _TFTfillRect
+                  0x0017a2                  _TFTdrawRoundRect
+                  0x0018d4                  _TFTfillRoundRect
+                  0x00196a                  _TFTdrawTriangle
+                  0x0019a2                  _TFTfillTriangle
+                  0x001ba0                  _TFTdrawChar
+                  0x001d9e                  _TFTsetTextWrap
+                  0x001dac                  _TFTdrawText
+                  0x001e6a                  _TFTFontNum
+                  0x001ec0                  _SPI1_Initialize
+                  0x001edc                  _SPI1_Exchange
+                  0x001f0c                  _SPI1_ExchangeBuffer
+                  0x001fd6                  _SPI1_Exchange8bit
+                  0x001fe6                  _SPI1_Exchange8bitBuffer
+                  0x001ffa                  _SPI1_StatusGet
+                  0x002002                  _PIN_MANAGER_Initialize
+                  0x002086                  _CLOCK_Initialize
+                  0x00210a                  _main
+                  0x002154                  _SYSTEM_Initialize
+                  0x002162                  _INTERRUPT_Initialize
                   0x015f00                  __FSEC.sec
 
 External Symbols in Program Memory (by name):
 
-                  0x001d36                  _CLOCK_Initialize
-                  0x001e10                  _INTERRUPT_Initialize
-                  0x001cb2                  _PIN_MANAGER_Initialize
-                  0x001b8c                  _SPI1_Exchange
-                  0x001c86                  _SPI1_Exchange8bit
-                  0x001c96                  _SPI1_Exchange8bitBuffer
-                  0x001bbc                  _SPI1_ExchangeBuffer
-                  0x001b70                  _SPI1_Initialize
-                  0x001caa                  _SPI1_StatusGet
-                  0x001e02                  _SYSTEM_Initialize
-                  0x000dfa                  _TFTBcmd
-                  0x00100c                  _TFTBlackTabInitialize
-                  0x001222                  _TFTInitScreenSize
-                  0x000eec                  _TFTRcmd1
-                  0x000f98                  _TFTRcmd2red
-                  0x000fd2                  _TFTRcmd3
-                  0x000de0                  _TFTResetPIN
-                  0x0012e6                  _TFTdrawCircle
-                  0x0013f2                  _TFTdrawCircleHelper
-                  0x001260                  _TFTdrawFastHLine
-                  0x0010c0                  _TFTdrawFastVLine
-                  0x00165a                  _TFTdrawLine
-                  0x00107c                  _TFTdrawPixel
-                  0x001602                  _TFTdrawRectWH
-                  0x001772                  _TFTdrawRoundRect
-                  0x00193a                  _TFTdrawTriangle
-                  0x0015d0                  _TFTfillCircle
-                  0x0014f6                  _TFTfillCircleHelper
-                  0x001738                  _TFTfillRect
-                  0x001146                  _TFTfillRectangle
-                  0x0018a4                  _TFTfillRoundRect
-                  0x001208                  _TFTfillScreen
-                  0x001972                  _TFTfillTriangle
-                  0x00102a                  _TFTsetAddrWindow
-                  0x000db2                  _TFTspiWriteBuffer
-                  0x000dca                  _TFTspiWriteByte
-                  0x000da0                  _TFTwriteCommand
-                  0x000d8e                  _TFTwriteData
+                  0x002086                  _CLOCK_Initialize
+                  0x002162                  _INTERRUPT_Initialize
+                  0x002002                  _PIN_MANAGER_Initialize
+                  0x001edc                  _SPI1_Exchange
+                  0x001fd6                  _SPI1_Exchange8bit
+                  0x001fe6                  _SPI1_Exchange8bitBuffer
+                  0x001f0c                  _SPI1_ExchangeBuffer
+                  0x001ec0                  _SPI1_Initialize
+                  0x001ffa                  _SPI1_StatusGet
+                  0x002154                  _SYSTEM_Initialize
+                  0x000e2a                  _TFTBcmd
+                  0x00103c                  _TFTBlackTabInitialize
+                  0x001e6a                  _TFTFontNum
+                  0x001252                  _TFTInitScreenSize
+                  0x000f1c                  _TFTRcmd1
+                  0x000fc8                  _TFTRcmd2red
+                  0x001002                  _TFTRcmd3
+                  0x000e10                  _TFTResetPIN
+                  0x001ba0                  _TFTdrawChar
+                  0x001316                  _TFTdrawCircle
+                  0x001422                  _TFTdrawCircleHelper
+                  0x001290                  _TFTdrawFastHLine
+                  0x0010f0                  _TFTdrawFastVLine
+                  0x00168a                  _TFTdrawLine
+                  0x0010ac                  _TFTdrawPixel
+                  0x001632                  _TFTdrawRectWH
+                  0x0017a2                  _TFTdrawRoundRect
+                  0x001dac                  _TFTdrawText
+                  0x00196a                  _TFTdrawTriangle
+                  0x001600                  _TFTfillCircle
+                  0x001526                  _TFTfillCircleHelper
+                  0x001768                  _TFTfillRect
+                  0x001176                  _TFTfillRectangle
+                  0x0018d4                  _TFTfillRoundRect
+                  0x001238                  _TFTfillScreen
+                  0x0019a2                  _TFTfillTriangle
+                  0x00105a                  _TFTsetAddrWindow
+                  0x001d9e                  _TFTsetTextWrap
+                  0x000de2                  _TFTspiWriteBuffer
+                  0x000dfa                  _TFTspiWriteByte
+                  0x000dd0                  _TFTwriteCommand
+                  0x000dbe                  _TFTwriteData
                   0x000246                  __AddressError
                   0x0002a6                  __DefaultInterrupt
                   0x015f00                  __FSEC.sec
@@ -306,12 +319,13 @@ External Symbols in Program Memory (by name):
                   0x000286                  __NVMError
                   0x000204                  __OscillatorFail
                   0x000224                  __StackError
-                  0x000d62                  ___delay_ms
+                  0x000d92                  ___delay_ms
                   0x000152                  __data_init
                   0x000152                  __data_init_da
                   0x00013c                  __psv_init
                   0x000100                  __resetPRI
-                  0x001db8                  _main
+                  0x00210a                  _main
+                  0x0002ac                  _strlen
 
 Memory Configuration
 
@@ -404,7 +418,7 @@ LOAD c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libfx-elf.a
                   0x000002          0x2 SHORT 0x0 ((ABSOLUTE (__reset) >> 0x10) & 0x7f)
                   0x000003          0x2 SHORT 0x0
 
-.text             0x000100        0x1ac
+.text             0x000100        0x1dc
  *(.init)
  .init            0x000100         0x4c c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(crt0_extended24.o)
                   0x000100                  __resetPRI
@@ -432,6 +446,8 @@ LOAD c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libfx-elf.a
                   0x0002aa          0x2 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(crt_start_mode_normalda.Meo)
                   0x0002aa                  __crt_start_mode
                   0x0002aa                  __crt_start_mode_normal
+ .libc.strlen     0x0002ac         0x30 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(strlen.DA_o)
+                  0x0002ac                  _strlen
 
 usercode
  *(usercode)
@@ -468,7 +484,7 @@ __FDEVOPT1
 .comment
  *(.comment)
 
-.debug_info       0x000000       0x32e0
+.debug_info       0x000000       0x36b3
  *(.debug_info)
  .debug_info      0x000000        0x555 build/default/debug/mcc_generated_files/pin_manager.o
  .debug_info      0x000555        0x17c build/default/debug/mcc_generated_files/interrupt_manager.o
@@ -477,11 +493,11 @@ __FDEVOPT1
  .debug_info      0x0012c5        0x441 build/default/debug/mcc_generated_files/traps.o
  .debug_info      0x001706        0x386 build/default/debug/mcc_generated_files/clock.o
  .debug_info      0x001a8c        0x245 build/default/debug/main.o
- .debug_info      0x001cd1       0x1374 build/default/debug/ST7735_TFT_BLACK.o
- .debug_info      0x003045        0x29b build/default/debug/ST7735_TFT_Font.o
+ .debug_info      0x001cd1       0x1747 build/default/debug/ST7735_TFT_BLACK.o
+ .debug_info      0x003418        0x29b build/default/debug/ST7735_TFT_Font.o
  *(.gnu.linkonce.wi.*)
 
-.debug_abbrev     0x000000        0x6b5
+.debug_abbrev     0x000000        0x6df
  *(.debug_abbrev)
  .debug_abbrev    0x000000         0x9b build/default/debug/mcc_generated_files/pin_manager.o
  .debug_abbrev    0x00009b         0x34 build/default/debug/mcc_generated_files/interrupt_manager.o
@@ -491,10 +507,10 @@ __FDEVOPT1
  .debug_abbrev    0x0003ca          0x1 build/default/debug/mcc_generated_files/mcc.o
  .debug_abbrev    0x0003cb         0x6a build/default/debug/mcc_generated_files/clock.o
  .debug_abbrev    0x000435         0x76 build/default/debug/main.o
- .debug_abbrev    0x0004ab        0x189 build/default/debug/ST7735_TFT_BLACK.o
- .debug_abbrev    0x000634         0x81 build/default/debug/ST7735_TFT_Font.o
+ .debug_abbrev    0x0004ab        0x1b3 build/default/debug/ST7735_TFT_BLACK.o
+ .debug_abbrev    0x00065e         0x81 build/default/debug/ST7735_TFT_Font.o
 
-.debug_line       0x000000        0xa6c
+.debug_line       0x000000        0xaf4
  *(.debug_line)
  .debug_line      0x000000        0x139 build/default/debug/mcc_generated_files/pin_manager.o
  .debug_line      0x000139         0x55 build/default/debug/mcc_generated_files/interrupt_manager.o
@@ -504,10 +520,10 @@ __FDEVOPT1
  .debug_line      0x000569         0x1a build/default/debug/mcc_generated_files/mcc.o
  .debug_line      0x000583        0x12b build/default/debug/mcc_generated_files/clock.o
  .debug_line      0x0006ae         0x8a build/default/debug/main.o
- .debug_line      0x000738        0x305 build/default/debug/ST7735_TFT_BLACK.o
- .debug_line      0x000a3d         0x2f build/default/debug/ST7735_TFT_Font.o
+ .debug_line      0x000738        0x38d build/default/debug/ST7735_TFT_BLACK.o
+ .debug_line      0x000ac5         0x2f build/default/debug/ST7735_TFT_Font.o
 
-.debug_frame      0x000000        0x61a
+.debug_frame      0x000000        0x682
  *(.debug_frame)
  .debug_frame     0x000000         0x2e build/default/debug/mcc_generated_files/pin_manager.o
  .debug_frame     0x00002e         0x2e build/default/debug/mcc_generated_files/interrupt_manager.o
@@ -516,9 +532,9 @@ __FDEVOPT1
  .debug_frame     0x00013a        0x17e build/default/debug/mcc_generated_files/traps.o
  .debug_frame     0x0002b8         0x2e build/default/debug/mcc_generated_files/clock.o
  .debug_frame     0x0002e6         0x2e build/default/debug/main.o
- .debug_frame     0x000314        0x306 build/default/debug/ST7735_TFT_BLACK.o
+ .debug_frame     0x000314        0x36e build/default/debug/ST7735_TFT_BLACK.o
 
-.debug_str        0x000000        0x1b9
+.debug_str        0x000000        0x239
  *(.debug_str)
  .debug_str       0x000000         0x21 build/default/debug/mcc_generated_files/pin_manager.o
  .debug_str       0x000021          0xc build/default/debug/mcc_generated_files/system.o
@@ -526,7 +542,7 @@ __FDEVOPT1
  .debug_str       0x0000d0         0x18 build/default/debug/mcc_generated_files/traps.o
  .debug_str       0x0000e8         0x12 build/default/debug/mcc_generated_files/clock.o
  .debug_str       0x0000fa         0x37 build/default/debug/main.o
- .debug_str       0x000131         0x88 build/default/debug/ST7735_TFT_BLACK.o
+ .debug_str       0x000131        0x108 build/default/debug/ST7735_TFT_BLACK.o
 
 .debug_loc
  *(.debug_loc)
@@ -535,7 +551,7 @@ __FDEVOPT1
  *(.debug_macinfo)
 
 .debug_pubnames
-                  0x000000        0x5c2
+                  0x000000        0x617
  *(.debug_pubnames)
  .debug_pubnames
                   0x000000         0x2d build/default/debug/mcc_generated_files/pin_manager.o
@@ -552,9 +568,9 @@ __FDEVOPT1
  .debug_pubnames
                   0x0001b9         0x8f build/default/debug/main.o
  .debug_pubnames
-                  0x000248        0x2fd build/default/debug/ST7735_TFT_BLACK.o
+                  0x000248        0x352 build/default/debug/ST7735_TFT_BLACK.o
  .debug_pubnames
-                  0x000545         0x7d build/default/debug/ST7735_TFT_Font.o
+                  0x00059a         0x7d build/default/debug/ST7735_TFT_Font.o
 
 .debug_ranges
  *(.debug_ranges)
@@ -2017,7 +2033,7 @@ LOAD default_isr
 LOAD data_init
 
 .debug_pubtypes
-                  0x0000c0        0x297
+                  0x0000c0        0x2ad
  .debug_pubtypes
                   0x0000c0         0x82 build/default/debug/mcc_generated_files/pin_manager.o
  .debug_pubtypes
@@ -2033,34 +2049,36 @@ LOAD data_init
  .debug_pubtypes
                   0x0002bb         0x1e build/default/debug/main.o
  .debug_pubtypes
-                  0x0002d9         0x7e build/default/debug/ST7735_TFT_BLACK.o
+                  0x0002d9         0x94 build/default/debug/ST7735_TFT_BLACK.o
 
 __c30_signature
-                  0x000357         0x48
+                  0x00036d         0x4e
  __c30_signature
-                  0x000357          0x6 build/default/debug/mcc_generated_files/pin_manager.o
+                  0x00036d          0x6 build/default/debug/mcc_generated_files/pin_manager.o
  __c30_signature
-                  0x00035d          0x6 build/default/debug/mcc_generated_files/interrupt_manager.o
+                  0x000373          0x6 build/default/debug/mcc_generated_files/interrupt_manager.o
  __c30_signature
-                  0x000363          0x6 build/default/debug/mcc_generated_files/system.o
+                  0x000379          0x6 build/default/debug/mcc_generated_files/system.o
  __c30_signature
-                  0x000369          0x6 build/default/debug/mcc_generated_files/spi1.o
+                  0x00037f          0x6 build/default/debug/mcc_generated_files/spi1.o
  __c30_signature
-                  0x00036f          0x6 build/default/debug/mcc_generated_files/traps.o
+                  0x000385          0x6 build/default/debug/mcc_generated_files/traps.o
  __c30_signature
-                  0x000375          0x6 build/default/debug/mcc_generated_files/mcc.o
+                  0x00038b          0x6 build/default/debug/mcc_generated_files/mcc.o
  __c30_signature
-                  0x00037b          0x6 build/default/debug/mcc_generated_files/clock.o
+                  0x000391          0x6 build/default/debug/mcc_generated_files/clock.o
  __c30_signature
-                  0x000381          0x6 build/default/debug/main.o
+                  0x000397          0x6 build/default/debug/main.o
  __c30_signature
-                  0x000387          0x6 build/default/debug/ST7735_TFT_BLACK.o
+                  0x00039d          0x6 build/default/debug/ST7735_TFT_BLACK.o
  __c30_signature
-                  0x00038d          0x6 build/default/debug/ST7735_TFT_Font.o
+                  0x0003a3          0x6 build/default/debug/ST7735_TFT_Font.o
  __c30_signature
-                  0x000393          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(crt0_extended24.o)
+                  0x0003a9          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(crt0_extended24.o)
  __c30_signature
-                  0x000399          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(data_init_24.o)
+                  0x0003af          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(data_init_24.o)
+ __c30_signature
+                  0x0003b5          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(strlen.DA_o)
 
 .ndata              0x0850          0xc
  .ndata             0x0850          0xc build/default/debug/ST7735_TFT_Font.o
@@ -2098,16 +2116,17 @@ __c30_signature
                     0x086c                  _OFFSET_COL
                     0x086d                  _OFFSET_ROW
 
+.ndata              0x086e          0x4
+ .ndata             0x086e          0x4 build/default/debug/ST7735_TFT_BLACK.o
+                    0x086e                  __TFTFontNumber
+                    0x086f                  __TFTCurrentFontWidth
+                    0x0870                  __TFTwrap
+
 .ndata              0x0828          0x2
  .ndata             0x0828          0x2 build/default/debug/mcc_generated_files/traps.o
 
-.ndata              0x086e          0x2
- .ndata             0x086e          0x2 build/default/debug/ST7735_TFT_BLACK.o
-                    0x086e                  __TFTCurrentFontWidth
-                    0x086f                  __TFTwrap
-
-.bss                0x0870         0x20
- .bss               0x0870         0x20 build/default/debug/mcc_generated_files/traps.o
+.bss                0x0872         0x20
+ .bss               0x0872         0x20 build/default/debug/mcc_generated_files/traps.o
 
 .config_ALTI2C1
                   0x015f2c          0x2
@@ -2159,62 +2178,66 @@ __c30_signature
  .ivt._NVMError
                   0x000008          0x2 build/default/debug/mcc_generated_files/traps.o
 
-.const              0x82ac        0xab6 load address 0x0002ac  
- .const             0x82ac        0xa76 build/default/debug/ST7735_TFT_Font.o
- .const             0x8d22         0x40 build/default/debug/ST7735_TFT_BLACK.o
+.const              0x82dc        0xab6 load address 0x0002dc  
+ .const             0x82dc        0xa76 build/default/debug/ST7735_TFT_Font.o
+ .const             0x8d52         0x40 build/default/debug/ST7735_TFT_BLACK.o
 
-.text             0x000d62       0x101a
- .text            0x000d62        0xe0e build/default/debug/ST7735_TFT_BLACK.o
-                  0x000d62                  ___delay_ms
-                  0x000d8e                  _TFTwriteData
-                  0x000da0                  _TFTwriteCommand
-                  0x000db2                  _TFTspiWriteBuffer
-                  0x000dca                  _TFTspiWriteByte
-                  0x000de0                  _TFTResetPIN
-                  0x000dfa                  _TFTBcmd
-                  0x000eec                  _TFTRcmd1
-                  0x000f98                  _TFTRcmd2red
-                  0x000fd2                  _TFTRcmd3
-                  0x00100c                  _TFTBlackTabInitialize
-                  0x00102a                  _TFTsetAddrWindow
-                  0x00107c                  _TFTdrawPixel
-                  0x0010c0                  _TFTdrawFastVLine
-                  0x001146                  _TFTfillRectangle
-                  0x001208                  _TFTfillScreen
-                  0x001222                  _TFTInitScreenSize
-                  0x001260                  _TFTdrawFastHLine
-                  0x0012e6                  _TFTdrawCircle
-                  0x0013f2                  _TFTdrawCircleHelper
-                  0x0014f6                  _TFTfillCircleHelper
-                  0x0015d0                  _TFTfillCircle
-                  0x001602                  _TFTdrawRectWH
-                  0x00165a                  _TFTdrawLine
-                  0x001738                  _TFTfillRect
-                  0x001772                  _TFTdrawRoundRect
-                  0x0018a4                  _TFTfillRoundRect
-                  0x00193a                  _TFTdrawTriangle
-                  0x001972                  _TFTfillTriangle
- .text            0x001b70        0x142 build/default/debug/mcc_generated_files/spi1.o
-                  0x001b70                  _SPI1_Initialize
-                  0x001b8c                  _SPI1_Exchange
-                  0x001bbc                  _SPI1_ExchangeBuffer
-                  0x001c86                  _SPI1_Exchange8bit
-                  0x001c96                  _SPI1_Exchange8bitBuffer
-                  0x001caa                  _SPI1_StatusGet
- .text            0x001cb2         0x84 build/default/debug/mcc_generated_files/pin_manager.o
-                  0x001cb2                  _PIN_MANAGER_Initialize
- .text            0x001d36         0x46 build/default/debug/mcc_generated_files/clock.o
-                  0x001d36                  _CLOCK_Initialize
+.text             0x000d92       0x133a
+ .text            0x000d92       0x112e build/default/debug/ST7735_TFT_BLACK.o
+                  0x000d92                  ___delay_ms
+                  0x000dbe                  _TFTwriteData
+                  0x000dd0                  _TFTwriteCommand
+                  0x000de2                  _TFTspiWriteBuffer
+                  0x000dfa                  _TFTspiWriteByte
+                  0x000e10                  _TFTResetPIN
+                  0x000e2a                  _TFTBcmd
+                  0x000f1c                  _TFTRcmd1
+                  0x000fc8                  _TFTRcmd2red
+                  0x001002                  _TFTRcmd3
+                  0x00103c                  _TFTBlackTabInitialize
+                  0x00105a                  _TFTsetAddrWindow
+                  0x0010ac                  _TFTdrawPixel
+                  0x0010f0                  _TFTdrawFastVLine
+                  0x001176                  _TFTfillRectangle
+                  0x001238                  _TFTfillScreen
+                  0x001252                  _TFTInitScreenSize
+                  0x001290                  _TFTdrawFastHLine
+                  0x001316                  _TFTdrawCircle
+                  0x001422                  _TFTdrawCircleHelper
+                  0x001526                  _TFTfillCircleHelper
+                  0x001600                  _TFTfillCircle
+                  0x001632                  _TFTdrawRectWH
+                  0x00168a                  _TFTdrawLine
+                  0x001768                  _TFTfillRect
+                  0x0017a2                  _TFTdrawRoundRect
+                  0x0018d4                  _TFTfillRoundRect
+                  0x00196a                  _TFTdrawTriangle
+                  0x0019a2                  _TFTfillTriangle
+                  0x001ba0                  _TFTdrawChar
+                  0x001d9e                  _TFTsetTextWrap
+                  0x001dac                  _TFTdrawText
+                  0x001e6a                  _TFTFontNum
+ .text            0x001ec0        0x142 build/default/debug/mcc_generated_files/spi1.o
+                  0x001ec0                  _SPI1_Initialize
+                  0x001edc                  _SPI1_Exchange
+                  0x001f0c                  _SPI1_ExchangeBuffer
+                  0x001fd6                  _SPI1_Exchange8bit
+                  0x001fe6                  _SPI1_Exchange8bitBuffer
+                  0x001ffa                  _SPI1_StatusGet
+ .text            0x002002         0x84 build/default/debug/mcc_generated_files/pin_manager.o
+                  0x002002                  _PIN_MANAGER_Initialize
+ .text            0x002086         0x46 build/default/debug/mcc_generated_files/clock.o
+                  0x002086                  _CLOCK_Initialize
 
-.dinit            0x001d7c         0x3c
- .dinit           0x001d7c         0x3c data_init
+.dinit            0x0020cc         0x3e
+ .dinit           0x0020cc         0x3e data_init
 
-.text             0x001db8         0x5e
- .text            0x001db8         0x30 build/default/debug/main.o
-                  0x001db8                  _main
- .text            0x001de8         0x1a build/default/debug/mcc_generated_files/traps.o
-                  0x001de8                  _TRAPS_halt_on_error
- .text            0x001e02          0xe build/default/debug/mcc_generated_files/system.o
-                  0x001e02                  _SYSTEM_Initialize
- .text            0x001e10          0x6 build/default/debug/mcc_generated_files/interrupt_manager.o
-                  0x001e10                  _INTERRUPT_Initialize
+.text             0x00210a         0x5e
+ .text            0x00210a         0x30 build/default/debug/main.o
+                  0x00210a                  _main
+ .text            0x00213a         0x1a build/default/debug/mcc_generated_files/traps.o
+                  0x00213a                  _TRAPS_halt_on_error
+ .text            0x002154          0xe build/default/debug/mcc_generated_files/system.o
+                  0x002154                  _SYSTEM_Initialize
+ .text            0x002162          0x6 build/default/debug/mcc_generated_files/interrupt_manager.o
+                  0x002162                  _INTERRUPT_Initialize
