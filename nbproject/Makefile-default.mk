@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=mcc_generated_files/pin_manager.c mcc_generated_files/interrupt_manager.c mcc_generated_files/system.c mcc_generated_files/spi1.c mcc_generated_files/traps.c mcc_generated_files/mcc.c mcc_generated_files/clock.c main.c ST7735_TFT_BLACK.c
+SOURCEFILES_QUOTED_IF_SPACED=mcc_generated_files/pin_manager.c mcc_generated_files/interrupt_manager.c mcc_generated_files/system.c mcc_generated_files/spi1.c mcc_generated_files/traps.c mcc_generated_files/mcc.c mcc_generated_files/clock.c main.c ST7735_TFT_BLACK.c ST7735_TFT_Font.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/mcc_generated_files/pin_manager.o ${OBJECTDIR}/mcc_generated_files/interrupt_manager.o ${OBJECTDIR}/mcc_generated_files/system.o ${OBJECTDIR}/mcc_generated_files/spi1.o ${OBJECTDIR}/mcc_generated_files/traps.o ${OBJECTDIR}/mcc_generated_files/mcc.o ${OBJECTDIR}/mcc_generated_files/clock.o ${OBJECTDIR}/main.o ${OBJECTDIR}/ST7735_TFT_BLACK.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/mcc_generated_files/pin_manager.o.d ${OBJECTDIR}/mcc_generated_files/interrupt_manager.o.d ${OBJECTDIR}/mcc_generated_files/system.o.d ${OBJECTDIR}/mcc_generated_files/spi1.o.d ${OBJECTDIR}/mcc_generated_files/traps.o.d ${OBJECTDIR}/mcc_generated_files/mcc.o.d ${OBJECTDIR}/mcc_generated_files/clock.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/ST7735_TFT_BLACK.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/mcc_generated_files/pin_manager.o ${OBJECTDIR}/mcc_generated_files/interrupt_manager.o ${OBJECTDIR}/mcc_generated_files/system.o ${OBJECTDIR}/mcc_generated_files/spi1.o ${OBJECTDIR}/mcc_generated_files/traps.o ${OBJECTDIR}/mcc_generated_files/mcc.o ${OBJECTDIR}/mcc_generated_files/clock.o ${OBJECTDIR}/main.o ${OBJECTDIR}/ST7735_TFT_BLACK.o ${OBJECTDIR}/ST7735_TFT_Font.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/mcc_generated_files/pin_manager.o.d ${OBJECTDIR}/mcc_generated_files/interrupt_manager.o.d ${OBJECTDIR}/mcc_generated_files/system.o.d ${OBJECTDIR}/mcc_generated_files/spi1.o.d ${OBJECTDIR}/mcc_generated_files/traps.o.d ${OBJECTDIR}/mcc_generated_files/mcc.o.d ${OBJECTDIR}/mcc_generated_files/clock.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/ST7735_TFT_BLACK.o.d ${OBJECTDIR}/ST7735_TFT_Font.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/mcc_generated_files/pin_manager.o ${OBJECTDIR}/mcc_generated_files/interrupt_manager.o ${OBJECTDIR}/mcc_generated_files/system.o ${OBJECTDIR}/mcc_generated_files/spi1.o ${OBJECTDIR}/mcc_generated_files/traps.o ${OBJECTDIR}/mcc_generated_files/mcc.o ${OBJECTDIR}/mcc_generated_files/clock.o ${OBJECTDIR}/main.o ${OBJECTDIR}/ST7735_TFT_BLACK.o
+OBJECTFILES=${OBJECTDIR}/mcc_generated_files/pin_manager.o ${OBJECTDIR}/mcc_generated_files/interrupt_manager.o ${OBJECTDIR}/mcc_generated_files/system.o ${OBJECTDIR}/mcc_generated_files/spi1.o ${OBJECTDIR}/mcc_generated_files/traps.o ${OBJECTDIR}/mcc_generated_files/mcc.o ${OBJECTDIR}/mcc_generated_files/clock.o ${OBJECTDIR}/main.o ${OBJECTDIR}/ST7735_TFT_BLACK.o ${OBJECTDIR}/ST7735_TFT_Font.o
 
 # Source Files
-SOURCEFILES=mcc_generated_files/pin_manager.c mcc_generated_files/interrupt_manager.c mcc_generated_files/system.c mcc_generated_files/spi1.c mcc_generated_files/traps.c mcc_generated_files/mcc.c mcc_generated_files/clock.c main.c ST7735_TFT_BLACK.c
+SOURCEFILES=mcc_generated_files/pin_manager.c mcc_generated_files/interrupt_manager.c mcc_generated_files/system.c mcc_generated_files/spi1.c mcc_generated_files/traps.c mcc_generated_files/mcc.c mcc_generated_files/clock.c main.c ST7735_TFT_BLACK.c ST7735_TFT_Font.c
 
 
 
@@ -143,6 +143,12 @@ ${OBJECTDIR}/ST7735_TFT_BLACK.o: ST7735_TFT_BLACK.c  .generated_files/flags/defa
 	@${RM} ${OBJECTDIR}/ST7735_TFT_BLACK.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  ST7735_TFT_BLACK.c  -o ${OBJECTDIR}/ST7735_TFT_BLACK.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/ST7735_TFT_BLACK.o.d"      -g -D__DEBUG   -mno-eds-warn  -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
+${OBJECTDIR}/ST7735_TFT_Font.o: ST7735_TFT_Font.c  .generated_files/flags/default/6264d97c2f16bdf883856a538d7891c6b4ca5dc .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/ST7735_TFT_Font.o.d 
+	@${RM} ${OBJECTDIR}/ST7735_TFT_Font.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ST7735_TFT_Font.c  -o ${OBJECTDIR}/ST7735_TFT_Font.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/ST7735_TFT_Font.o.d"      -g -D__DEBUG   -mno-eds-warn  -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+	
 else
 ${OBJECTDIR}/mcc_generated_files/pin_manager.o: mcc_generated_files/pin_manager.c  .generated_files/flags/default/e32cea476bcb86b34a3a81deb763b7834f07eb6c .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}/mcc_generated_files" 
@@ -197,6 +203,12 @@ ${OBJECTDIR}/ST7735_TFT_BLACK.o: ST7735_TFT_BLACK.c  .generated_files/flags/defa
 	@${RM} ${OBJECTDIR}/ST7735_TFT_BLACK.o.d 
 	@${RM} ${OBJECTDIR}/ST7735_TFT_BLACK.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  ST7735_TFT_BLACK.c  -o ${OBJECTDIR}/ST7735_TFT_BLACK.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/ST7735_TFT_BLACK.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+	
+${OBJECTDIR}/ST7735_TFT_Font.o: ST7735_TFT_Font.c  .generated_files/flags/default/9ae2988db4d21d3de428da60fc7c4a90a86c0831 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/ST7735_TFT_Font.o.d 
+	@${RM} ${OBJECTDIR}/ST7735_TFT_Font.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ST7735_TFT_Font.c  -o ${OBJECTDIR}/ST7735_TFT_Font.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/ST7735_TFT_Font.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
 endif
 
