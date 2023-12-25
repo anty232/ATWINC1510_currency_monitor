@@ -11,6 +11,8 @@
 #include <xc.h>
 #include "mcc_generated_files/pin_manager.h"
 #include <stdint.h>
+#include <string.h>
+#include <stdlib.h>
 #include <stdbool.h>
 #include <stddef.h>
 
@@ -27,10 +29,22 @@ void TFTBlackTabInitialize(void);
 void TFTdrawPixel(int16_t x, int16_t y, uint16_t color);
 void TFTsetAddrWindow(int16_t x0, int16_t y0, int16_t x1, int16_t y1);
 void TFTdrawFastVLine(int16_t x, int16_t y, int16_t h, uint16_t color);
+void TFTdrawFastHLine(int16_t x, int16_t y, int16_t w, uint16_t color);
 void TFTfillScreen(uint16_t color);
 void TFTInitScreenSize(uint8_t colOffset, uint8_t rowOffset, uint8_t width_TFT, uint8_t height_TFT);
 void TFTResetPIN(void);
 void __delay_ms(uint16_t ms);
+void TFTdrawCircle(int16_t x0, int16_t y0, int16_t r, uint16_t color);
+void TFTdrawCircleHelper(int16_t x0, int16_t y0, int16_t r, uint8_t cornername, uint16_t color);
+void TFTfillCircleHelper(int16_t x0, int16_t y0, int16_t r, uint8_t cornername, int16_t delta, uint16_t color);
+void TFTfillCircle(int16_t x0, int16_t y0, int16_t r, uint16_t color);
+void TFTdrawRectWH(uint8_t x, uint8_t y, uint8_t w, uint8_t h, uint16_t color);
+void TFTdrawLine(int16_t x0, int16_t y0, int16_t x1, int16_t y1, uint16_t color);
+void TFTfillRect(uint8_t x, uint8_t y, uint8_t w, uint8_t h, uint16_t color);
+void TFTdrawRoundRect(uint8_t x, uint8_t y, uint8_t w, uint8_t h, uint8_t r, uint16_t color);
+void TFTfillRoundRect(uint8_t x, uint8_t y, uint8_t w, uint8_t h, uint8_t r, uint16_t color);
+void TFTdrawTriangle(int16_t x0, int16_t y0, int16_t x1, int16_t y1, int16_t x2, int16_t y2, uint16_t color);
+void TFTfillTriangle(int16_t x0, int16_t y0, int16_t x1, int16_t y1, int16_t x2, int16_t y2, uint16_t color);
 
 
 // ******** ST7735 registers ********
@@ -109,6 +123,8 @@ void __delay_ms(uint16_t ms);
 #define   ST7735_BROWN   0x6201
 #define   ST7735_PINK    0xF812
 #define   ST7735_ORANGE  0xF100
+
+#define _swap_TFT(a, b) { int16_t t; t = a; a = b; b = t;}
 
 #ifdef	__cplusplus
 }

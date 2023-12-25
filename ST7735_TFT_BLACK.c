@@ -2,6 +2,7 @@
 #include "ST7735_TFT_BLACK.h"
 #include "mcc_generated_files/spi1.h"
 
+
 uint8_t _TFTCurrentFontWidth = 5;
 bool _TFTwrap = true;
 
@@ -283,5 +284,246 @@ void TFTInitScreenSize(uint8_t colOffset, uint8_t rowOffset, uint8_t width_TFT, 
 	_heightTFT = height_TFT;
 	_widthStartTFT = width_TFT; // Holds init value will never change after this point
 	_heightStartTFT = height_TFT; // Holds init value will never change after this point
+}
+
+void TFTdrawFastHLine(int16_t x, int16_t y, int16_t w, uint16_t color) {
+    uint8_t hi, lo;
+    if ((x >= _widthTFT) || (y >= _heightTFT))
+        return;
+    if ((x + w - 1) >= _widthTFT)
+        w = _widthTFT - x;
+    hi = color >> 8;
+    lo = color & 0xFF;
+    TFTsetAddrWindow(x, y, x + w - 1, y);
+    DC_RB5_SetHigh();
+    CS_RB6_SetLow();
+    while (w--) {
+        TFTspiWriteByte(hi);
+        TFTspiWriteByte(lo);
+    }
+    CS_RB6_SetHigh();
+}
+
+
+void TFTdrawCircle(int16_t x0, int16_t y0, int16_t r, uint16_t color) {
+    int16_t f, ddF_x, ddF_y,x ,y;
+    f = 1 - r, ddF_x = 1, ddF_y = -2 * r, x = 0, y = r;
+    TFTdrawPixel(x0, y0 + r, color);
+    TFTdrawPixel(x0, y0 - r, color);
+    TFTdrawPixel(x0 + r, y0, color);
+    TFTdrawPixel(x0 - r, y0, color);
+    while (x < y) {
+        if (f >= 0) {
+            y--;
+            ddF_y += 2;
+            f += ddF_y;
+        }
+        x++;
+        ddF_x += 2;
+        f += ddF_x;
+        TFTdrawPixel(x0 + x, y0 + y, color);
+        TFTdrawPixel(x0 - x, y0 + y, color);
+        TFTdrawPixel(x0 + x, y0 - y, color);
+        TFTdrawPixel(x0 - x, y0 - y, color);
+        TFTdrawPixel(x0 + y, y0 + x, color);
+        TFTdrawPixel(x0 - y, y0 + x, color);
+        TFTdrawPixel(x0 + y, y0 - x, color);
+        TFTdrawPixel(x0 - y, y0 - x, color);
+    }
+}
+
+void TFTdrawCircleHelper(int16_t x0, int16_t y0, int16_t r, uint8_t cornername, uint16_t color) {
+    int16_t f, ddF_x, ddF_y, x, y ;
+    f = 1 - r, ddF_x = 1, ddF_y = -2 * r, x = 0, y = r;
+    while (x < y) {
+        if (f >= 0) {
+            y--;
+            ddF_y += 2;
+            f += ddF_y;
+        }
+        x++;
+        ddF_x += 2;
+        f += ddF_x;
+        if (cornername & 0x4) {
+            TFTdrawPixel(x0 + x, y0 + y, color);
+            TFTdrawPixel(x0 + y, y0 + x, color);
+        }
+        if (cornername & 0x2) {
+            TFTdrawPixel(x0 + x, y0 - y, color);
+            TFTdrawPixel(x0 + y, y0 - x, color);
+        }
+        if (cornername & 0x8) {
+            TFTdrawPixel(x0 - y, y0 + x, color);
+            TFTdrawPixel(x0 - x, y0 + y, color);
+        }
+        if (cornername & 0x1) {
+            TFTdrawPixel(x0 - y, y0 - x, color);
+            TFTdrawPixel(x0 - x, y0 - y, color);
+        }
+    }
+}
+
+void TFTfillCircleHelper(int16_t x0, int16_t y0, int16_t r, uint8_t cornername, int16_t delta, uint16_t color) {
+    int16_t f, ddF_x, ddF_y,x ,y;
+    f = 1 - r, ddF_x = 1, ddF_y = -2 * r, x = 0, y = r;
+    while (x < y) {
+        if (f >= 0) {
+            y--;
+            ddF_y += 2;
+            f += ddF_y;
+        }
+        x++;
+        ddF_x += 2;
+        f += ddF_x;
+
+        if (cornername & 0x1) {
+            TFTdrawFastVLine(x0 + x, y0 - y, 2 * y + 1 + delta, color);
+            TFTdrawFastVLine(x0 + y, y0 - x, 2 * x + 1 + delta, color);
+        }
+        if (cornername & 0x2) {
+            TFTdrawFastVLine(x0 - x, y0 - y, 2 * y + 1 + delta, color);
+            TFTdrawFastVLine(x0 - y, y0 - x, 2 * x + 1 + delta, color);
+        }
+    }
+}
+
+void TFTfillCircle(int16_t x0, int16_t y0, int16_t r, uint16_t color) {
+    TFTdrawFastVLine(x0, y0 - r, 2 * r + 1, color);
+    TFTfillCircleHelper(x0, y0, r, 3, 0, color);
+}
+
+// Desc: draws rectangle at (x,y) where h is height and w is width of the rectangle.
+
+void TFTdrawRectWH(uint8_t x, uint8_t y, uint8_t w, uint8_t h, uint16_t color) {
+    TFTdrawFastHLine(x, y, w, color);
+    TFTdrawFastHLine(x, y + h - 1, w, color);
+    TFTdrawFastVLine(x, y, h, color);
+    TFTdrawFastVLine(x + w - 1, y, h, color);
+}
+
+
+void TFTdrawLine(int16_t x0, int16_t y0, int16_t x1, int16_t y1, uint16_t color) {
+    int16_t steep, dx, dy, err, ystep;
+    steep = abs(y1 - y0) > abs(x1 - x0);
+    if (steep) {
+        _swap_TFT(x0, y0);
+        _swap_TFT(x1, y1);
+    }
+    if (x0 > x1) {
+        _swap_TFT(x0, x1);
+        _swap_TFT(y0, y1);
+    }
+    dx = x1 - x0;
+    dy = abs(y1 - y0);
+
+    err = dx / 2;
+    if (y0 < y1) {
+        ystep = 1;
+    } else {
+        ystep = -1;
+    }
+
+    for (; x0 <= x1; x0++) {
+        if (steep) {
+            TFTdrawPixel(y0, x0, color);
+        } else {
+            TFTdrawPixel(x0, y0, color);
+        }
+        err -= dy;
+        if (err < 0) {
+            y0 += ystep;
+            err += dx;
+        }
+    }
+}
+
+void TFTfillRect(uint8_t x, uint8_t y, uint8_t w, uint8_t h, uint16_t color) {
+    int16_t i;
+    for (i = x; i < x + w; i++) {
+        TFTdrawFastVLine((uint8_t)i, y, h, color);
+    }
+}
+
+// Desc: draws a rectangle with rounded edges. h: height, w:width, r: radius of the rounded edges.
+
+void TFTdrawRoundRect(uint8_t x, uint8_t y, uint8_t w, uint8_t h, uint8_t r, uint16_t color) {
+    TFTdrawFastHLine(x + r, y, w - 2 * r, color);
+    TFTdrawFastHLine(x + r, y + h - 1, w - 2 * r, color);
+    TFTdrawFastVLine(x, y + r, h - 2 * r, color);
+    TFTdrawFastVLine(x + w - 1, y + r, h - 2 * r, color);
+    TFTdrawCircleHelper(x + r, y + r, r, 1, color);
+    TFTdrawCircleHelper(x + w - r - 1, y + r, r, 2, color);
+    TFTdrawCircleHelper(x + w - r - 1, y + h - r - 1, r, 4, color);
+    TFTdrawCircleHelper(x + r, y + h - r - 1, r, 8, color);
+}
+
+// Desc: draws a filled rectangle with rounded edges. h: height, w:width, r: radius of the rounded edges.
+
+void TFTfillRoundRect(uint8_t x, uint8_t y, uint8_t w, uint8_t h, uint8_t r, uint16_t color) {
+    TFTfillRect(x + r, y, w - 2 * r, h, color);
+    TFTfillCircleHelper(x + w - r - 1, y + r, r, 1, h - 2 * r - 1, color);
+    TFTfillCircleHelper(x + r, y + r, r, 2, h - 2 * r - 1, color);
+}
+
+void TFTdrawTriangle(int16_t x0, int16_t y0, int16_t x1, int16_t y1, int16_t x2, int16_t y2, uint16_t color) {
+    TFTdrawLine(x0, y0, x1, y1, color);
+    TFTdrawLine(x1, y1, x2, y2, color);
+    TFTdrawLine(x2, y2, x0, y0, color);
+}
+
+// Desc: draws a filled triangle of coordinates (x0,y0), (x1,y1) and (x2,y2).
+
+void TFTfillTriangle(int16_t x0, int16_t y0, int16_t x1, int16_t y1, int16_t x2, int16_t y2, uint16_t color) {
+    int16_t a, b, y, last, dx01, dy01, dx02, dy02, dx12, dy12, sa, sb;
+    if (y0 > y1) {
+        _swap_TFT(y0, y1);
+        _swap_TFT(x0, x1);
+    }
+    if (y1 > y2) {
+        _swap_TFT(y2, y1);
+        _swap_TFT(x2, x1);
+    }
+    if (y0 > y1) {
+        _swap_TFT(y0, y1);
+        _swap_TFT(x0, x1);
+    }
+    if (y0 == y2) {
+        a = b = x0;
+        if (x1 < a) a = x1;
+        else if (x1 > b) b = x1;
+        if (x2 < a) a = x2;
+        else if (x2 > b) b = x2;
+        TFTdrawFastHLine(a, y0, b - a + 1, color);
+        return;
+    }
+    dx01 = x1 - x0;
+    dy01 = y1 - y0;
+    dx02 = x2 - x0;
+    dy02 = y2 - y0;
+    dx12 = x2 - x1;
+    dy12 = y2 - y1;
+    sa = 0;
+    sb = 0;
+    if (y1 == y2) last = y1;
+    else last = y1 - 1;
+    for (y = y0; y <= last; y++) {
+        a = x0 + sa / dy01;
+        b = x0 + sb / dy02;
+        sa += dx01;
+        sb += dx02;
+        if (a > b) _swap_TFT(a, b);
+        TFTdrawFastHLine(a, y, b - a + 1, color);
+    }
+
+    sa = dx12 * (y - y1);
+    sb = dx02 * (y - y0);
+    for (; y <= y2; y++) {
+        a = x1 + sa / dy12;
+        b = x0 + sb / dy02;
+        sa += dx12;
+        sb += dx02;
+        if (a > b) _swap_TFT(a, b);
+        TFTdrawFastHLine(a, y, b - a + 1, color);
+    }
 }
 
