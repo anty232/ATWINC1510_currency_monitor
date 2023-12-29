@@ -10,7 +10,7 @@
 
 void DrawGreenArrow (int16_t y);
 void DrawRedArrow (int16_t y);
-void DrawPage(uint16_t text_color);
+void DrawPage(uint16_t text_color, char *text, char *text1, char *text2, char *text3);
 
 
 

@@ -9,7 +9,11 @@
 	uint8_t OFFSET_ROW = 1 ; // 3, with manufacture tolerance/defects
 	uint8_t TFT_PIXEL_WIDTH = 128;// Screen width in pixels
 	uint8_t TFT_PIXEL_HEIGHT = 160; // Screen height in pixels
-
+   
+    char text[] = "USD=4,02";
+    char text1[] = "EUR=4,34";
+    char text2[] = "GBP=4,99";
+    char text3[] = "CZK=0,18";
   
     
 int main(void)
@@ -27,7 +31,7 @@ int main(void)
     
     while (1)
     {   
-        DrawPage(ST7735_CYAN);
+        DrawPage(ST7735_CYAN, text, text1, text2, text3);
         
     }
 
