@@ -4,13 +4,13 @@ Tool Name:
   c:\program files\microchip\xc16\v2.10\bin\bin\..\bin/elf-ld.exe
 
 Command:
-  -TC:\\Users\\kslig\\AppData\\Local\\Temp\\tmp000043bc.00 \
-  -TC:\\Users\\kslig\\AppData\\Local\\Temp\\tmp000043bc.01 \
-  -TC:\\Users\\kslig\\AppData\\Local\\Temp\\tmp000043bc.02 \
-  -TC:\\Users\\kslig\\AppData\\Local\\Temp\\tmp000043bc.03 \
-  -TC:\\Users\\kslig\\AppData\\Local\\Temp\\tmp000043bc.04 \
-  -TC:\\Users\\kslig\\AppData\\Local\\Temp\\tmp000043bc.05 \
-  -TC:\\Users\\kslig\\AppData\\Local\\Temp\\tmp000043bc.06 \
+  -TC:\\Users\\kslig\\AppData\\Local\\Temp\\tmp00004280.00 \
+  -TC:\\Users\\kslig\\AppData\\Local\\Temp\\tmp00004280.01 \
+  -TC:\\Users\\kslig\\AppData\\Local\\Temp\\tmp00004280.02 \
+  -TC:\\Users\\kslig\\AppData\\Local\\Temp\\tmp00004280.03 \
+  -TC:\\Users\\kslig\\AppData\\Local\\Temp\\tmp00004280.04 \
+  -TC:\\Users\\kslig\\AppData\\Local\\Temp\\tmp00004280.05 \
+  -TC:\\Users\\kslig\\AppData\\Local\\Temp\\tmp00004280.06 \
   -p24FJ128GA705 \
   --mdfp=C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC24F-GA-GB_DFP/1.9.336/xc16 \
   -o \
