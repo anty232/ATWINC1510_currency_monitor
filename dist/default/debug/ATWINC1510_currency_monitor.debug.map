@@ -4,13 +4,6 @@ Tool Name:
   c:\program files\microchip\xc16\v2.10\bin\bin\..\bin/elf-ld.exe
 
 Command:
-  -TC:\\Users\\kslig\\AppData\\Local\\Temp\\tmp00005028.00 \
-  -TC:\\Users\\kslig\\AppData\\Local\\Temp\\tmp00005028.01 \
-  -TC:\\Users\\kslig\\AppData\\Local\\Temp\\tmp00005028.02 \
-  -TC:\\Users\\kslig\\AppData\\Local\\Temp\\tmp00005028.03 \
-  -TC:\\Users\\kslig\\AppData\\Local\\Temp\\tmp00005028.04 \
-  -TC:\\Users\\kslig\\AppData\\Local\\Temp\\tmp00005028.05 \
-  -TC:\\Users\\kslig\\AppData\\Local\\Temp\\tmp00005028.06 \
   -p24FJ128GA705 \
   --mdfp=C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC24F-GA-GB_DFP/1.9.336/xc16 \
   -o \
@@ -35,11 +28,13 @@ Command:
   build/default/debug/main.o \
   build/default/debug/ST7735_TFT_BLACK.o \
   build/default/debug/ST7735_TFT_Font.o \
+  build/default/debug/display.o \
   --local-stack \
   --defsym=__MPLAB_BUILD=1 \
   --defsym=__MPLAB_DEBUG=1 \
   --defsym=__DEBUG=1 \
-  -Tp24FJ128GA705.gld.07 \
+  --defsym=__MPLAB_DEBUGGER_SIMULATOR=1 \
+  -Tp24FJ128GA705.gld.00 \
   --stack=16 \
   --check-sections \
   --data-init \

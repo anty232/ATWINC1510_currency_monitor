@@ -17,6 +17,7 @@
       </logicalFolder>
       <itemPath>ST7735_TFT_BLACK.h</itemPath>
       <itemPath>ST7735_TFT_Font.h</itemPath>
+      <itemPath>display.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -39,6 +40,7 @@
       <itemPath>main.c</itemPath>
       <itemPath>ST7735_TFT_BLACK.c</itemPath>
       <itemPath>ST7735_TFT_Font.c</itemPath>
+      <itemPath>display.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -60,7 +62,7 @@
         <targetDevice>PIC24FJ128GA705</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>nEdbgTool</platformTool>
+        <platformTool>Simulator</platformTool>
         <languageToolchain>XC16</languageToolchain>
         <languageToolchainVersion>2.10</languageToolchainVersion>
         <platform>3</platform>
