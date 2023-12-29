@@ -28,8 +28,6 @@ int main(void)
     while (1)
     {   
         DrawPage(ST7735_CYAN);
-        //TFTfillRect(110, 40, 10, 9, ST7735_GREEN );
-        //TFTfillTriangle(int16_t x0, int16_t y0, int16_t x1, int16_t y1, int16_t x2, int16_t y2, uint16_t color);
         
     }
 
