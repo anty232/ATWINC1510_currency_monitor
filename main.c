@@ -12,24 +12,102 @@
 	uint8_t OFFSET_ROW = 0 ; // 3, with manufacture tolerance/defects
 	uint8_t TFT_PIXEL_WIDTH = 128;// Screen width in pixels
 	uint8_t TFT_PIXEL_HEIGHT = 160; // Screen height in pixels
-    
+
+
+
+uint8_t State=0;
+uint16_t portValue;
+
+void GetButton(void){
+    if(SW_0_GetValue()==0){
+        __delay_ms(10);
+        if(SW_0_GetValue()==0){
+            State = 1;
+            State= State %3;
+        }
+        else{
+            State = State;
+        }
+    } 
+    else if(SW_1_GetValue()==0){
+            __delay_ms(10);
+            if(SW_1_GetValue()==0){
+                State++;
+                State = State %3;
+        }
+        else{
+                State = State;
+        }
+    } 
+    else {
+        State = State;
+    }
+    return State;
+}
+
+void StateMachine(void){
+    //GetButton();
+    GREEN_LED_SetHigh();
+    YELLOW_LED_SetHigh();
+    RED_LED_SetHigh();
+    switch(State){
+        case 0:
+            
+            RED_LED_SetLow();
+            if (SW_0_GetValue()==0){
+                State = 1;
+            }
+            break;
+        case 1:
+            YELLOW_LED_SetLow();
+            
+            if (SW_1_GetValue()==0){
+                State = 2;
+            }
+            break;
+        case 2:          
+            
+            GREEN_LED_SetLow();
+            if (SW_0_GetValue()==0){
+                State = 3;
+            }
+            break;
+        case 3:
+            
+            if (SW_1_GetValue()==0){
+                State = 0;
+            }
+            break;
+        default:
+            break;
+    }
+}
+
+
+
 int main(void)
 {
     // initialize the device
     SYSTEM_Initialize();
-    TFTBlackTabInitialize();
+    //TFTBlackTabInitialize();
    
     
-	TFTInitScreenSize(OFFSET_COL, OFFSET_ROW , TFT_PIXEL_WIDTH  , TFT_PIXEL_HEIGHT);
+	//TFTInitScreenSize(OFFSET_COL, OFFSET_ROW , TFT_PIXEL_WIDTH  , TFT_PIXEL_HEIGHT);
     
     while (1)
     {   
+       // TFTfillScreen(ST7735_MAGENTA);
+        //TFTdrawPixel(10, 10, ST7735_BLACK);
+        //TFTdrawFastVLine(50, 50, 50, ST7735_BLACK);
+        portValue=SW_0_GetValue();
+        StateMachine();
+        /*
+        if(SW_1_GetValue()==0){
+            GREEN_LED_Toggle();
+            __delay_ms(50);
+        }
+         */
         
-        TFTfillScreen(ST7735_MAGENTA);
-        
-        TFTdrawPixel(10, 10, ST7735_BLACK);
-        TFTdrawFastVLine(50, 50, 50, ST7735_BLACK);
-        Nop();
     }
 
     return 1;

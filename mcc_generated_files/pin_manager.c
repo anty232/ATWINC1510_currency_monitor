@@ -62,15 +62,15 @@ void PIN_MANAGER_Initialize (void)
      * Setting the Output Latch SFR(s)
      ***************************************************************************/
     LATA = 0x0000;
-    LATB = 0x8060;
-    LATC = 0x0000;
+    LATB = 0x8070;
+    LATC = 0x0018;
 
     /****************************************************************************
      * Setting the GPIO Direction SFR(s)
      ***************************************************************************/
     TRISA = 0x7F94;
-    TRISB = 0x7F9D;
-    TRISC = 0x03FF;
+    TRISB = 0x7F8D;
+    TRISC = 0x03E7;
 
     /****************************************************************************
      * Setting the Weak Pull Up and Weak Pull Down SFR(s)
@@ -94,7 +94,7 @@ void PIN_MANAGER_Initialize (void)
      ***************************************************************************/
     ANSA = 0x0004;
     ANSB = 0x720C;
-    ANSC = 0x000F;
+    ANSC = 0x0007;
     
     /****************************************************************************
      * Set the PPS
@@ -102,8 +102,8 @@ void PIN_MANAGER_Initialize (void)
     __builtin_write_OSCCONL(OSCCON & 0xbf); // unlock PPS
 
     RPOR0bits.RP1R = 0x0007;    //RB1->SPI1:SDO1
-    RPOR13bits.RP27R = 0x0008;    //RA1->SPI1:SCK1OUT
     RPOR13bits.RP26R = 0x0009;    //RA0->SPI1:SS1OUT
+    RPOR13bits.RP27R = 0x0008;    //RA1->SPI1:SCK1OUT
     RPINR20bits.SDI1R = 0x0000;    //RB0->SPI1:SDI1
 
     __builtin_write_OSCCONL(OSCCON | 0x40); // lock PPS
