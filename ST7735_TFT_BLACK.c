@@ -529,6 +529,13 @@ void TFTfillTriangle(int16_t x0, int16_t y0, int16_t x1, int16_t y1, int16_t x2,
     }
 }
 
+// Desc: writes a char (c) on the TFT
+// Param 1 , 2 : coordinates (x, y).
+// Param 3: The ASCII character
+// Param 4: color 565 16-bit
+// Param 5: background color
+// Param 6: size.
+
 void TFTdrawChar(uint8_t x, uint8_t y, uint8_t c, uint16_t color, uint16_t bg, uint8_t size) {
     const uint8_t ASCIIOffset = 0x20;
     uint8_t i, j;
