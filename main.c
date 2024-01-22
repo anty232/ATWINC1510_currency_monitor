@@ -22,8 +22,11 @@ void GetButton(void){
     if(SW_0_GetValue()==0){
         __delay_ms(10);
         if(SW_0_GetValue()==0){
-            State = 1;
-            State= State %3;
+            State--;
+            State= State %4;
+            while(SW_0_GetValue()==0){
+                Nop();
+            }
         }
         else{
             State = State;
@@ -31,9 +34,12 @@ void GetButton(void){
     } 
     else if(SW_1_GetValue()==0){
             __delay_ms(10);
-            if(SW_1_GetValue()==0){
-                State++;
-                State = State %3;
+        if(SW_1_GetValue()==0){
+            State++;
+            State = State %4;
+            while(SW_1_GetValue()==0){
+                Nop();
+            }
         }
         else{
                 State = State;
@@ -42,41 +48,27 @@ void GetButton(void){
     else {
         State = State;
     }
-    return State;
+
 }
 
 void StateMachine(void){
-    //GetButton();
+    GetButton();
     GREEN_LED_SetHigh();
     YELLOW_LED_SetHigh();
     RED_LED_SetHigh();
+    BLUE_LED_SetHigh();
     switch(State){
         case 0:
-            
             RED_LED_SetLow();
-            if (SW_0_GetValue()==0){
-                State = 1;
-            }
             break;
         case 1:
             YELLOW_LED_SetLow();
-            
-            if (SW_1_GetValue()==0){
-                State = 2;
-            }
             break;
         case 2:          
-            
             GREEN_LED_SetLow();
-            if (SW_0_GetValue()==0){
-                State = 3;
-            }
             break;
         case 3:
-            
-            if (SW_1_GetValue()==0){
-                State = 0;
-            }
+            BLUE_LED_SetLow();
             break;
         default:
             break;

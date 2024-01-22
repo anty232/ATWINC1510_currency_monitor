@@ -1806,6 +1806,152 @@
 
 */
 #define GREEN_LED_SetDigitalOutput() (_TRISC4 = 0)
+/**
+  @Summary
+    Sets the GPIO pin, RC5, high using LATC5.
+
+  @Description
+    Sets the GPIO pin, RC5, high using LATC5.
+
+  @Preconditions
+    The RC5 must be set to an output.
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    <code>
+    // Set RC5 high (1)
+    BLUE_LED_SetHigh();
+    </code>
+
+*/
+#define BLUE_LED_SetHigh()          (_LATC5 = 1)
+/**
+  @Summary
+    Sets the GPIO pin, RC5, low using LATC5.
+
+  @Description
+    Sets the GPIO pin, RC5, low using LATC5.
+
+  @Preconditions
+    The RC5 must be set to an output.
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    <code>
+    // Set RC5 low (0)
+    BLUE_LED_SetLow();
+    </code>
+
+*/
+#define BLUE_LED_SetLow()           (_LATC5 = 0)
+/**
+  @Summary
+    Toggles the GPIO pin, RC5, using LATC5.
+
+  @Description
+    Toggles the GPIO pin, RC5, using LATC5.
+
+  @Preconditions
+    The RC5 must be set to an output.
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    <code>
+    // Toggle RC5
+    BLUE_LED_Toggle();
+    </code>
+
+*/
+#define BLUE_LED_Toggle()           (_LATC5 ^= 1)
+/**
+  @Summary
+    Reads the value of the GPIO pin, RC5.
+
+  @Description
+    Reads the value of the GPIO pin, RC5.
+
+  @Preconditions
+    None.
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    <code>
+    uint16_t portValue;
+
+    // Read RC5
+    postValue = BLUE_LED_GetValue();
+    </code>
+
+*/
+#define BLUE_LED_GetValue()         _RC5
+/**
+  @Summary
+    Configures the GPIO pin, RC5, as an input.
+
+  @Description
+    Configures the GPIO pin, RC5, as an input.
+
+  @Preconditions
+    None.
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    <code>
+    // Sets the RC5 as an input
+    BLUE_LED_SetDigitalInput();
+    </code>
+
+*/
+#define BLUE_LED_SetDigitalInput()  (_TRISC5 = 1)
+/**
+  @Summary
+    Configures the GPIO pin, RC5, as an output.
+
+  @Description
+    Configures the GPIO pin, RC5, as an output.
+
+  @Preconditions
+    None.
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    <code>
+    // Sets the RC5 as an output
+    BLUE_LED_SetDigitalOutput();
+    </code>
+
+*/
+#define BLUE_LED_SetDigitalOutput() (_TRISC5 = 0)
 
 /**
     Section: Function Prototypes
