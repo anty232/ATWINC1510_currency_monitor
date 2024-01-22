@@ -1,30 +1,30 @@
 Microchip Technology Inc, v2.10 (B)
 
 Tool Name:
-  c:\program files\microchip\xc16\v2.10\bin\bin\..\bin/elf-ld.exe
+  c:\spb_data\bin\bin\..\bin/elf-ld.exe
 
 Command:
-  -TC:\\Users\\kslig\\AppData\\Local\\Temp\\tmp00004840.00 \
-  -TC:\\Users\\kslig\\AppData\\Local\\Temp\\tmp00004840.01 \
-  -TC:\\Users\\kslig\\AppData\\Local\\Temp\\tmp00004840.02 \
-  -TC:\\Users\\kslig\\AppData\\Local\\Temp\\tmp00004840.03 \
-  -TC:\\Users\\kslig\\AppData\\Local\\Temp\\tmp00004840.04 \
-  -TC:\\Users\\kslig\\AppData\\Local\\Temp\\tmp00004840.05 \
-  -TC:\\Users\\kslig\\AppData\\Local\\Temp\\tmp00004840.06 \
+  -TC:\\Users\\Wojtek\\AppData\\Local\\Temp\\tmp00000dcc.00 \
+  -TC:\\Users\\Wojtek\\AppData\\Local\\Temp\\tmp00000dcc.01 \
+  -TC:\\Users\\Wojtek\\AppData\\Local\\Temp\\tmp00000dcc.02 \
+  -TC:\\Users\\Wojtek\\AppData\\Local\\Temp\\tmp00000dcc.03 \
+  -TC:\\Users\\Wojtek\\AppData\\Local\\Temp\\tmp00000dcc.04 \
+  -TC:\\Users\\Wojtek\\AppData\\Local\\Temp\\tmp00000dcc.05 \
+  -TC:\\Users\\Wojtek\\AppData\\Local\\Temp\\tmp00000dcc.06 \
   -p24FJ128GA705 \
-  --mdfp=C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC24F-GA-GB_DFP/1.9.336/xc16 \
+  --mdfp=D:/Program Files/packs/Microchip/PIC24F-GA-GB_DFP/1.9.336/xc16 \
   -o \
   dist/default/debug/ATWINC1510_currency_monitor.debug.elf \
-  -Lc:/program files/microchip/xc16/v2.10/bin/bin/.. \
-  -LC:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC24F-GA-GB_DFP/1.9.336/xc16/bin/../support/PIC24F/gld \
-  -Lc:/program files/microchip/xc16/v2.10/bin/bin/../../lib \
-  -Lc:/program files/microchip/xc16/v2.10/bin/bin/../../support/PIC24E/gld \
-  -Lc:/program files/microchip/xc16/v2.10/bin/bin/../../support/PIC24F/gld \
-  -Lc:/program files/microchip/xc16/v2.10/bin/bin/../../support/PIC24H/gld \
-  -Lc:/program files/microchip/xc16/v2.10/bin/bin/../../support/dsPIC30F/gld \
-  -Lc:/program files/microchip/xc16/v2.10/bin/bin/../../support/dsPIC33C/gld \
-  -Lc:/program files/microchip/xc16/v2.10/bin/bin/../../support/dsPIC33E/gld \
-  -Lc:/program files/microchip/xc16/v2.10/bin/bin/../../support/dsPIC33F/gld \
+  -Lc:/spb_data/bin/bin/.. \
+  -LD:/Program Files/packs/Microchip/PIC24F-GA-GB_DFP/1.9.336/xc16/bin/../support/PIC24F/gld \
+  -Lc:/spb_data/bin/bin/../../lib \
+  -Lc:/spb_data/bin/bin/../../support/PIC24E/gld \
+  -Lc:/spb_data/bin/bin/../../support/PIC24F/gld \
+  -Lc:/spb_data/bin/bin/../../support/PIC24H/gld \
+  -Lc:/spb_data/bin/bin/../../support/dsPIC30F/gld \
+  -Lc:/spb_data/bin/bin/../../support/dsPIC33C/gld \
+  -Lc:/spb_data/bin/bin/../../support/dsPIC33E/gld \
+  -Lc:/spb_data/bin/bin/../../support/dsPIC33F/gld \
   build/default/debug/mcc_generated_files/pin_manager.o \
   build/default/debug/mcc_generated_files/interrupt_manager.o \
   build/default/debug/mcc_generated_files/system.o \
@@ -66,13 +66,13 @@ Command:
 Optional library libpPIC24Fxxx.a not found
 Archive member included because of file (symbol)
 
-c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(crt0_extended24.o)
+c:/spb_data/bin/bin/../../lib\libc99-pic30-elf.a(crt0_extended24.o)
                               (__resetPRI)
-c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(data_init_24.o)
-                              c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(crt0_extended24.o) (__data_init_da)
-c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(crt_start_mode_normalda.Meo)
+c:/spb_data/bin/bin/../../lib\libc99-pic30-elf.a(data_init_24.o)
+                              c:/spb_data/bin/bin/../../lib\libc99-pic30-elf.a(crt0_extended24.o) (__data_init_da)
+c:/spb_data/bin/bin/../../lib\libc99-pic30-elf.a(crt_start_mode_normalda.Meo)
                               (__crt_start_mode_normal)
-c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(strlen.DA_o)
+c:/spb_data/bin/bin/../../lib\libc99-elf.a(strlen.DA_o)
                               build/default/debug/ST7735_TFT_BLACK.o (_strlen)
 
 
@@ -109,11 +109,11 @@ section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
 .text                        0x100               0x1dc           0x2ca  (714)
 .const                       0x2dc               0xab6          0x1011  (4113)
-.text                        0xd92              0x13a0          0x1d70  (7536)
-.dinit                      0x2132                0x76            0xb1  (177)
-.text                       0x21a8                0xa0            0xf0  (240)
+.text                        0xd92              0x14b0          0x1f08  (7944)
+.dinit                      0x2242                0x7c            0xba  (186)
+.text                       0x22be                0x74            0xae  (174)
 
-                 Total "program" memory used (bytes):         0x31ec  (12780) 9%
+                 Total "program" memory used (bytes):         0x334b  (13131) 9%
 
 
 "data" Memory  [Origin = 0x800, Length = 0x4000]
@@ -131,10 +131,11 @@ reserve_data_0x82a           0x82a                0x26            0x26  (38)
 .ndata                       0x850                   0             0xc  (12)
 .nbss                        0x85c                   0             0xa  (10)
 .ndata                       0x866                   0             0x8  (8)
-.data                        0x86e                   0            0x4a  (74)
-.bss                         0x8b8                   0            0x20  (32)
+.nbss                        0x86e                   0             0x2  (2)
+.data                        0x870                   0            0x4a  (74)
+.bss                         0x8ba                   0            0x20  (32)
 
-                 Total "data" memory used (bytes):           0xd8  (216) 1%
+                 Total "data" memory used (bytes):           0xda  (218) 1%
 
 
 Dynamic Memory Usage
@@ -142,9 +143,9 @@ Dynamic Memory Usage
 region                     address                      maximum length  (dec)
 ------                     -------                      ---------------------
 heap                             0                                   0  (0)
-stack                        0x8d8                              0x3f28  (16168)
+stack                        0x8da                              0x3f26  (16166)
 
-                 Maximum dynamic memory (bytes):         0x3f28  (16168)
+                 Maximum dynamic memory (bytes):         0x3f26  (16166)
 
 Info: Project is using a large data memory model when small data memory model is sufficient.
 
@@ -174,17 +175,19 @@ External Symbols in Data Memory (by address):
                     0x086a                  __TFTFontNumber
                     0x086b                  __TFTCurrentFontWidth
                     0x086c                  __TFTwrap
-                    0x086e                  _title
-                    0x087e                  _info
-                    0x0894                  _text
-                    0x089d                  _text1
-                    0x08a6                  _text2
-                    0x08af                  _text3
+                    0x086e                  _State
+                    0x0870                  _title
+                    0x0880                  _info
+                    0x0896                  _text
+                    0x089f                  _text1
+                    0x08a8                  _text2
+                    0x08b1                  _text3
 
 External Symbols in Data Memory (by name):
 
                     0x0866                  _OFFSET_COL
                     0x0867                  _OFFSET_ROW
+                    0x086e                  _State
                     0x0869                  _TFT_PIXEL_HEIGHT
                     0x0868                  _TFT_PIXEL_WIDTH
                     0x086b                  __TFTCurrentFontWidth
@@ -200,18 +203,18 @@ External Symbols in Data Memory (by name):
                     0x0863                  __heightTFT
                     0x0864                  __widthStartTFT
                     0x0862                  __widthTFT
-                    0x087e                  _info
+                    0x0880                  _info
                     0x0850                  _pFontDefaultptr
                     0x085a                  _pFontHomeptr
                     0x0854                  _pFontSevenptr
                     0x0852                  _pFontThickptr
                     0x0858                  _pFontTinyptr
                     0x0856                  _pFontWideptr
-                    0x0894                  _text
-                    0x089d                  _text1
-                    0x08a6                  _text2
-                    0x08af                  _text3
-                    0x086e                  _title
+                    0x0896                  _text
+                    0x089f                  _text1
+                    0x08a8                  _text2
+                    0x08b1                  _text3
+                    0x0870                  _title
 
 External Symbols in Program Memory (by address):
 
@@ -265,31 +268,35 @@ External Symbols in Program Memory (by address):
                   0x001fd6                  _SPI1_Exchange8bit
                   0x001fe6                  _SPI1_Exchange8bitBuffer
                   0x001ffa                  _SPI1_StatusGet
-                  0x002002                  _DrawGreenArrow
-                  0x00201e                  _DrawRedArrow
-                  0x00203a                  _DrawPage
-                  0x0020ae                  _PIN_MANAGER_Initialize
-                  0x0021a8                  _CLOCK_Initialize
-                  0x0021ee                  _main
-                  0x002234                  _SYSTEM_Initialize
-                  0x002242                  _INTERRUPT_Initialize
+                  0x002002                  _GetButton
+                  0x002080                  _StateMachine
+                  0x0020ee                  _main
+                  0x002110                  _DrawGreenArrow
+                  0x00212c                  _DrawRedArrow
+                  0x002148                  _DrawPage
+                  0x0021bc                  _PIN_MANAGER_Initialize
+                  0x0022be                  _CLOCK_Initialize
+                  0x00231e                  _SYSTEM_Initialize
+                  0x00232c                  _INTERRUPT_Initialize
                   0x015f00                  __FSEC.sec
 
 External Symbols in Program Memory (by name):
 
-                  0x0021a8                  _CLOCK_Initialize
-                  0x002002                  _DrawGreenArrow
-                  0x00203a                  _DrawPage
-                  0x00201e                  _DrawRedArrow
-                  0x002242                  _INTERRUPT_Initialize
-                  0x0020ae                  _PIN_MANAGER_Initialize
+                  0x0022be                  _CLOCK_Initialize
+                  0x002110                  _DrawGreenArrow
+                  0x002148                  _DrawPage
+                  0x00212c                  _DrawRedArrow
+                  0x002002                  _GetButton
+                  0x00232c                  _INTERRUPT_Initialize
+                  0x0021bc                  _PIN_MANAGER_Initialize
                   0x001edc                  _SPI1_Exchange
                   0x001fd6                  _SPI1_Exchange8bit
                   0x001fe6                  _SPI1_Exchange8bitBuffer
                   0x001f0c                  _SPI1_ExchangeBuffer
                   0x001ec0                  _SPI1_Initialize
                   0x001ffa                  _SPI1_StatusGet
-                  0x002234                  _SYSTEM_Initialize
+                  0x00231e                  _SYSTEM_Initialize
+                  0x002080                  _StateMachine
                   0x000e2a                  _TFTBcmd
                   0x00103c                  _TFTBlackTabInitialize
                   0x001e6a                  _TFTFontNum
@@ -334,7 +341,7 @@ External Symbols in Program Memory (by name):
                   0x000152                  __data_init_da
                   0x00013c                  __psv_init
                   0x000100                  __resetPRI
-                  0x0021ee                  _main
+                  0x0020ee                  _main
                   0x0002ac                  _strlen
 
 Memory Configuration
@@ -407,7 +414,7 @@ LOAD build/default/debug/display.o
                     0x0001                  __MPLAB_DEBUG = 0x1
                     0x0001                  __DEBUG = 0x1
 LOAD pPIC24Fxxx
-LOAD c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libfx-elf.a
+LOAD c:/spb_data/bin/bin/../../lib\libfx-elf.a
                     0x15f00                  __FSEC = 0x15f00
                     0x15f10                  __FBSLIM = 0x15f10
                     0x15f14                  __FSIGN = 0x15f14
@@ -431,11 +438,11 @@ LOAD c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libfx-elf.a
 
 .text             0x000100        0x1dc
  *(.init)
- .init            0x000100         0x4c c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(crt0_extended24.o)
+ .init            0x000100         0x4c c:/spb_data/bin/bin/../../lib\libc99-pic30-elf.a(crt0_extended24.o)
                   0x000100                  __resetPRI
                   0x000100                  __reset
                   0x00013c                  __psv_init
- .init            0x00014c         0xb8 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(data_init_24.o)
+ .init            0x00014c         0xb8 c:/spb_data/bin/bin/../../lib\libc99-pic30-elf.a(data_init_24.o)
                   0x000152                  __data_init
                   0x000152                  __data_init_da
  *(.user_init)
@@ -454,10 +461,10 @@ LOAD c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libfx-elf.a
  *(.libdsp)
  *(.lib*)
  .libpic30_crt_start_mode
-                  0x0002aa          0x2 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(crt_start_mode_normalda.Meo)
+                  0x0002aa          0x2 c:/spb_data/bin/bin/../../lib\libc99-pic30-elf.a(crt_start_mode_normalda.Meo)
                   0x0002aa                  __crt_start_mode
                   0x0002aa                  __crt_start_mode_normal
- .libc.strlen     0x0002ac         0x30 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(strlen.DA_o)
+ .libc.strlen     0x0002ac         0x30 c:/spb_data/bin/bin/../../lib\libc99-elf.a(strlen.DA_o)
                   0x0002ac                  _strlen
 
 usercode
@@ -495,21 +502,21 @@ __FDEVOPT1
 .comment
  *(.comment)
 
-.debug_info       0x000000       0x3a1e
+.debug_info       0x000000       0x3be1
  *(.debug_info)
- .debug_info      0x000000        0x555 build/default/debug/mcc_generated_files/pin_manager.o
- .debug_info      0x000555        0x17c build/default/debug/mcc_generated_files/interrupt_manager.o
- .debug_info      0x0006d1        0x35e build/default/debug/mcc_generated_files/system.o
- .debug_info      0x000a2f        0x896 build/default/debug/mcc_generated_files/spi1.o
- .debug_info      0x0012c5        0x441 build/default/debug/mcc_generated_files/traps.o
- .debug_info      0x001706        0x386 build/default/debug/mcc_generated_files/clock.o
- .debug_info      0x001a8c        0x302 build/default/debug/main.o
- .debug_info      0x001d8e       0x1747 build/default/debug/ST7735_TFT_BLACK.o
- .debug_info      0x0034d5        0x29b build/default/debug/ST7735_TFT_Font.o
- .debug_info      0x003770        0x2ae build/default/debug/display.o
+ .debug_info      0x000000        0x557 build/default/debug/mcc_generated_files/pin_manager.o
+ .debug_info      0x000557        0x17c build/default/debug/mcc_generated_files/interrupt_manager.o
+ .debug_info      0x0006d3        0x360 build/default/debug/mcc_generated_files/system.o
+ .debug_info      0x000a33        0x898 build/default/debug/mcc_generated_files/spi1.o
+ .debug_info      0x0012cb        0x441 build/default/debug/mcc_generated_files/traps.o
+ .debug_info      0x00170c        0x386 build/default/debug/mcc_generated_files/clock.o
+ .debug_info      0x001a92        0x4bb build/default/debug/main.o
+ .debug_info      0x001f4d       0x1749 build/default/debug/ST7735_TFT_BLACK.o
+ .debug_info      0x003696        0x29b build/default/debug/ST7735_TFT_Font.o
+ .debug_info      0x003931        0x2b0 build/default/debug/display.o
  *(.gnu.linkonce.wi.*)
 
-.debug_abbrev     0x000000        0x7a7
+.debug_abbrev     0x000000        0x82b
  *(.debug_abbrev)
  .debug_abbrev    0x000000         0x9b build/default/debug/mcc_generated_files/pin_manager.o
  .debug_abbrev    0x00009b         0x34 build/default/debug/mcc_generated_files/interrupt_manager.o
@@ -518,26 +525,26 @@ __FDEVOPT1
  .debug_abbrev    0x0002ca        0x100 build/default/debug/mcc_generated_files/traps.o
  .debug_abbrev    0x0003ca          0x1 build/default/debug/mcc_generated_files/mcc.o
  .debug_abbrev    0x0003cb         0x6a build/default/debug/mcc_generated_files/clock.o
- .debug_abbrev    0x000435         0xaf build/default/debug/main.o
- .debug_abbrev    0x0004e4        0x1b3 build/default/debug/ST7735_TFT_BLACK.o
- .debug_abbrev    0x000697         0x81 build/default/debug/ST7735_TFT_Font.o
- .debug_abbrev    0x000718         0x8f build/default/debug/display.o
+ .debug_abbrev    0x000435        0x133 build/default/debug/main.o
+ .debug_abbrev    0x000568        0x1b3 build/default/debug/ST7735_TFT_BLACK.o
+ .debug_abbrev    0x00071b         0x81 build/default/debug/ST7735_TFT_Font.o
+ .debug_abbrev    0x00079c         0x8f build/default/debug/display.o
 
-.debug_line       0x000000        0xba1
+.debug_line       0x000000        0xb42
  *(.debug_line)
- .debug_line      0x000000        0x139 build/default/debug/mcc_generated_files/pin_manager.o
- .debug_line      0x000139         0x55 build/default/debug/mcc_generated_files/interrupt_manager.o
- .debug_line      0x00018e        0x11f build/default/debug/mcc_generated_files/system.o
- .debug_line      0x0002ad        0x16c build/default/debug/mcc_generated_files/spi1.o
- .debug_line      0x000419        0x150 build/default/debug/mcc_generated_files/traps.o
- .debug_line      0x000569         0x1a build/default/debug/mcc_generated_files/mcc.o
- .debug_line      0x000583        0x12b build/default/debug/mcc_generated_files/clock.o
- .debug_line      0x0006ae         0x9f build/default/debug/main.o
- .debug_line      0x00074d        0x38f build/default/debug/ST7735_TFT_BLACK.o
- .debug_line      0x000adc         0x2f build/default/debug/ST7735_TFT_Font.o
- .debug_line      0x000b0b         0x96 build/default/debug/display.o
+ .debug_line      0x000000        0x108 build/default/debug/mcc_generated_files/pin_manager.o
+ .debug_line      0x000108         0x55 build/default/debug/mcc_generated_files/interrupt_manager.o
+ .debug_line      0x00015d         0xee build/default/debug/mcc_generated_files/system.o
+ .debug_line      0x00024b        0x13b build/default/debug/mcc_generated_files/spi1.o
+ .debug_line      0x000386        0x150 build/default/debug/mcc_generated_files/traps.o
+ .debug_line      0x0004d6         0x1a build/default/debug/mcc_generated_files/mcc.o
+ .debug_line      0x0004f0        0x12b build/default/debug/mcc_generated_files/clock.o
+ .debug_line      0x00061b        0x11e build/default/debug/main.o
+ .debug_line      0x000739        0x35e build/default/debug/ST7735_TFT_BLACK.o
+ .debug_line      0x000a97         0x2f build/default/debug/ST7735_TFT_Font.o
+ .debug_line      0x000ac6         0x7c build/default/debug/display.o
 
-.debug_frame      0x000000        0x6e4
+.debug_frame      0x000000        0x718
  *(.debug_frame)
  .debug_frame     0x000000         0x2e build/default/debug/mcc_generated_files/pin_manager.o
  .debug_frame     0x00002e         0x2e build/default/debug/mcc_generated_files/interrupt_manager.o
@@ -545,19 +552,19 @@ __FDEVOPT1
  .debug_frame     0x00008a         0xb0 build/default/debug/mcc_generated_files/spi1.o
  .debug_frame     0x00013a        0x17e build/default/debug/mcc_generated_files/traps.o
  .debug_frame     0x0002b8         0x2e build/default/debug/mcc_generated_files/clock.o
- .debug_frame     0x0002e6         0x2e build/default/debug/main.o
- .debug_frame     0x000314        0x36e build/default/debug/ST7735_TFT_BLACK.o
- .debug_frame     0x000682         0x62 build/default/debug/display.o
+ .debug_frame     0x0002e6         0x62 build/default/debug/main.o
+ .debug_frame     0x000348        0x36e build/default/debug/ST7735_TFT_BLACK.o
+ .debug_frame     0x0006b6         0x62 build/default/debug/display.o
 
-.debug_str        0x000000        0x239
+.debug_str        0x000000        0x243
  *(.debug_str)
  .debug_str       0x000000         0x21 build/default/debug/mcc_generated_files/pin_manager.o
  .debug_str       0x000021          0xc build/default/debug/mcc_generated_files/system.o
  .debug_str       0x00002d         0xa3 build/default/debug/mcc_generated_files/spi1.o
  .debug_str       0x0000d0         0x18 build/default/debug/mcc_generated_files/traps.o
  .debug_str       0x0000e8         0x12 build/default/debug/mcc_generated_files/clock.o
- .debug_str       0x0000fa         0x37 build/default/debug/main.o
- .debug_str       0x000131        0x108 build/default/debug/ST7735_TFT_BLACK.o
+ .debug_str       0x0000fa         0x41 build/default/debug/main.o
+ .debug_str       0x00013b        0x108 build/default/debug/ST7735_TFT_BLACK.o
 
 .debug_loc
  *(.debug_loc)
@@ -566,7 +573,7 @@ __FDEVOPT1
  *(.debug_macinfo)
 
 .debug_pubnames
-                  0x000000        0x667
+                  0x000000        0x690
  *(.debug_pubnames)
  .debug_pubnames
                   0x000000         0x2d build/default/debug/mcc_generated_files/pin_manager.o
@@ -581,13 +588,13 @@ __FDEVOPT1
  .debug_pubnames
                   0x000192         0x27 build/default/debug/mcc_generated_files/clock.o
  .debug_pubnames
-                  0x0001b9         0x89 build/default/debug/main.o
+                  0x0001b9         0xb2 build/default/debug/main.o
  .debug_pubnames
-                  0x000242        0x352 build/default/debug/ST7735_TFT_BLACK.o
+                  0x00026b        0x352 build/default/debug/ST7735_TFT_BLACK.o
  .debug_pubnames
-                  0x000594         0x7d build/default/debug/ST7735_TFT_Font.o
+                  0x0005bd         0x7d build/default/debug/ST7735_TFT_Font.o
  .debug_pubnames
-                  0x000611         0x56 build/default/debug/display.o
+                  0x00063a         0x56 build/default/debug/display.o
 
 .debug_ranges
  *(.debug_ranges)
@@ -2042,9 +2049,9 @@ __FDEVOPT1
                     0x03ae                  UART2 = 0x3ae
                     0x03ae                  _UART2 = 0x3ae
 START GROUP
-LOAD c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a
-LOAD c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libm-elf.a
-LOAD c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a
+LOAD c:/spb_data/bin/bin/../../lib\libc99-pic30-elf.a
+LOAD c:/spb_data/bin/bin/../../lib\libm-elf.a
+LOAD c:/spb_data/bin/bin/../../lib\libc99-elf.a
 END GROUP
 OUTPUT(dist/default/debug/ATWINC1510_currency_monitor.debug.elf elf32-pic30)
 LOAD /CW/_FSEC
@@ -2052,7 +2059,7 @@ LOAD default_isr
 LOAD data_init
 
 .debug_pubtypes
-                  0x0000d8        0x2d8
+                  0x0000d8        0x304
  .debug_pubtypes
                   0x0000d8         0x82 build/default/debug/mcc_generated_files/pin_manager.o
  .debug_pubtypes
@@ -2066,42 +2073,42 @@ LOAD data_init
  .debug_pubtypes
                   0x0002a8         0x2b build/default/debug/mcc_generated_files/clock.o
  .debug_pubtypes
-                  0x0002d3         0x1e build/default/debug/main.o
+                  0x0002d3         0x4a build/default/debug/main.o
  .debug_pubtypes
-                  0x0002f1         0x94 build/default/debug/ST7735_TFT_BLACK.o
+                  0x00031d         0x94 build/default/debug/ST7735_TFT_BLACK.o
  .debug_pubtypes
-                  0x000385         0x2b build/default/debug/display.o
+                  0x0003b1         0x2b build/default/debug/display.o
 
 __c30_signature
-                  0x0003b0         0x54
+                  0x0003dc         0x54
  __c30_signature
-                  0x0003b0          0x6 build/default/debug/mcc_generated_files/pin_manager.o
+                  0x0003dc          0x6 build/default/debug/mcc_generated_files/pin_manager.o
  __c30_signature
-                  0x0003b6          0x6 build/default/debug/mcc_generated_files/interrupt_manager.o
+                  0x0003e2          0x6 build/default/debug/mcc_generated_files/interrupt_manager.o
  __c30_signature
-                  0x0003bc          0x6 build/default/debug/mcc_generated_files/system.o
+                  0x0003e8          0x6 build/default/debug/mcc_generated_files/system.o
  __c30_signature
-                  0x0003c2          0x6 build/default/debug/mcc_generated_files/spi1.o
+                  0x0003ee          0x6 build/default/debug/mcc_generated_files/spi1.o
  __c30_signature
-                  0x0003c8          0x6 build/default/debug/mcc_generated_files/traps.o
+                  0x0003f4          0x6 build/default/debug/mcc_generated_files/traps.o
  __c30_signature
-                  0x0003ce          0x6 build/default/debug/mcc_generated_files/mcc.o
+                  0x0003fa          0x6 build/default/debug/mcc_generated_files/mcc.o
  __c30_signature
-                  0x0003d4          0x6 build/default/debug/mcc_generated_files/clock.o
+                  0x000400          0x6 build/default/debug/mcc_generated_files/clock.o
  __c30_signature
-                  0x0003da          0x6 build/default/debug/main.o
+                  0x000406          0x6 build/default/debug/main.o
  __c30_signature
-                  0x0003e0          0x6 build/default/debug/ST7735_TFT_BLACK.o
+                  0x00040c          0x6 build/default/debug/ST7735_TFT_BLACK.o
  __c30_signature
-                  0x0003e6          0x6 build/default/debug/ST7735_TFT_Font.o
+                  0x000412          0x6 build/default/debug/ST7735_TFT_Font.o
  __c30_signature
-                  0x0003ec          0x6 build/default/debug/display.o
+                  0x000418          0x6 build/default/debug/display.o
  __c30_signature
-                  0x0003f2          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(crt0_extended24.o)
+                  0x00041e          0x6 c:/spb_data/bin/bin/../../lib\libc99-pic30-elf.a(crt0_extended24.o)
  __c30_signature
-                  0x0003f8          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(data_init_24.o)
+                  0x000424          0x6 c:/spb_data/bin/bin/../../lib\libc99-pic30-elf.a(data_init_24.o)
  __c30_signature
-                  0x0003fe          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(strlen.DA_o)
+                  0x00042a          0x6 c:/spb_data/bin/bin/../../lib\libc99-elf.a(strlen.DA_o)
 
 .ndata              0x0850          0xc
  .ndata             0x0850          0xc build/default/debug/ST7735_TFT_Font.o
@@ -2139,18 +2146,22 @@ __c30_signature
 .ndata              0x0828          0x2
  .ndata             0x0828          0x2 build/default/debug/mcc_generated_files/traps.o
 
-.data               0x086e         0x4a
- .data              0x086e         0x26 build/default/debug/display.o
-                    0x086e                  _title
-                    0x087e                  _info
- .data              0x0894         0x24 build/default/debug/main.o
-                    0x0894                  _text
-                    0x089d                  _text1
-                    0x08a6                  _text2
-                    0x08af                  _text3
+.nbss               0x086e          0x2
+ .nbss              0x086e          0x2 build/default/debug/main.o
+                    0x086e                  _State
 
-.bss                0x08b8         0x20
- .bss               0x08b8         0x20 build/default/debug/mcc_generated_files/traps.o
+.data               0x0870         0x4a
+ .data              0x0870         0x26 build/default/debug/display.o
+                    0x0870                  _title
+                    0x0880                  _info
+ .data              0x0896         0x24 build/default/debug/main.o
+                    0x0896                  _text
+                    0x089f                  _text1
+                    0x08a8                  _text2
+                    0x08b1                  _text3
+
+.bss                0x08ba         0x20
+ .bss               0x08ba         0x20 build/default/debug/mcc_generated_files/traps.o
 
 .config_ALTI2C1
                   0x015f2c          0x2
@@ -2206,7 +2217,7 @@ __c30_signature
  .const             0x82dc        0xa76 build/default/debug/ST7735_TFT_Font.o
  .const             0x8d52         0x40 build/default/debug/ST7735_TFT_BLACK.o
 
-.text             0x000d92       0x13a0
+.text             0x000d92       0x14b0
  .text            0x000d92       0x112e build/default/debug/ST7735_TFT_BLACK.o
                   0x000d92                  ___delay_ms
                   0x000dbe                  _TFTwriteData
@@ -2248,24 +2259,26 @@ __c30_signature
                   0x001fd6                  _SPI1_Exchange8bit
                   0x001fe6                  _SPI1_Exchange8bitBuffer
                   0x001ffa                  _SPI1_StatusGet
- .text            0x002002         0xac build/default/debug/display.o
-                  0x002002                  _DrawGreenArrow
-                  0x00201e                  _DrawRedArrow
-                  0x00203a                  _DrawPage
- .text            0x0020ae         0x84 build/default/debug/mcc_generated_files/pin_manager.o
-                  0x0020ae                  _PIN_MANAGER_Initialize
+ .text            0x002002        0x10e build/default/debug/main.o
+                  0x002002                  _GetButton
+                  0x002080                  _StateMachine
+                  0x0020ee                  _main
+ .text            0x002110         0xac build/default/debug/display.o
+                  0x002110                  _DrawGreenArrow
+                  0x00212c                  _DrawRedArrow
+                  0x002148                  _DrawPage
+ .text            0x0021bc         0x86 build/default/debug/mcc_generated_files/pin_manager.o
+                  0x0021bc                  _PIN_MANAGER_Initialize
 
-.dinit            0x002132         0x76
- .dinit           0x002132         0x76 data_init
+.dinit            0x002242         0x7c
+ .dinit           0x002242         0x7c data_init
 
-.text             0x0021a8         0xa0
- .text            0x0021a8         0x46 build/default/debug/mcc_generated_files/clock.o
-                  0x0021a8                  _CLOCK_Initialize
- .text            0x0021ee         0x2c build/default/debug/main.o
-                  0x0021ee                  _main
- .text            0x00221a         0x1a build/default/debug/mcc_generated_files/traps.o
-                  0x00221a                  _TRAPS_halt_on_error
- .text            0x002234          0xe build/default/debug/mcc_generated_files/system.o
-                  0x002234                  _SYSTEM_Initialize
- .text            0x002242          0x6 build/default/debug/mcc_generated_files/interrupt_manager.o
-                  0x002242                  _INTERRUPT_Initialize
+.text             0x0022be         0x74
+ .text            0x0022be         0x46 build/default/debug/mcc_generated_files/clock.o
+                  0x0022be                  _CLOCK_Initialize
+ .text            0x002304         0x1a build/default/debug/mcc_generated_files/traps.o
+                  0x002304                  _TRAPS_halt_on_error
+ .text            0x00231e          0xe build/default/debug/mcc_generated_files/system.o
+                  0x00231e                  _SYSTEM_Initialize
+ .text            0x00232c          0x6 build/default/debug/mcc_generated_files/interrupt_manager.o
+                  0x00232c                  _INTERRUPT_Initialize

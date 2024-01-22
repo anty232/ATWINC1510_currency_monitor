@@ -41,9 +41,18 @@
          <string>WATCHDOG</string>
          <string>class com.microchip.mcc.mcu16.systemManager.wdt.Wdt</string>
       </entry>
+      <entry>
+         <string>com.microchip.mcc.boardsupportlibrary.BoardSuppportLibraryLibraryModule</string>
+         <string>class com.microchip.mcc.protocolServices.base.modules.librarymodule.LibraryModule</string>
+      </entry>
+      <entry>
+         <string>com.microchip.mcc.mcu16.Mcu16PeripheralLibraryLibraryModule</string>
+         <string>class com.microchip.mcc.protocolServices.base.modules.librarymodule.LibraryModule</string>
+      </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
       <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.mcu16.Mcu16PeripheralLibrary" version="1.171.4"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.boardsupportlibrary.BoardSuppportLibrary" version="1.12.0"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -1656,7 +1665,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="Custom Name RA10"/>
-         <value/>
+         <value>SW_1</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="Custom Name RA11"/>
@@ -1688,7 +1697,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="Custom Name RA7"/>
-         <value/>
+         <value>SW_0</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="Custom Name RA8"/>
@@ -1840,7 +1849,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="RA10"/>
-         <value>disabled</value>
+         <value>input</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="RA11"/>
@@ -1872,7 +1881,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="RA7"/>
-         <value>disabled</value>
+         <value>input</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="RA8"/>
@@ -2076,7 +2085,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="customNameUserSet RA10"/>
-         <value>disabled</value>
+         <value>enabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="customNameUserSet RA11"/>
@@ -2108,7 +2117,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="customNameUserSet RA7"/>
-         <value>disabled</value>
+         <value>enabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="customNameUserSet RA8"/>
@@ -5492,7 +5501,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="Pin Module" registerAlias="IOCPUA"/>
-         <value>0</value>
+         <value>1152</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="Pin Module" registerAlias="IOCPUB"/>
@@ -6392,7 +6401,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="IOCPUA" settingAlias="IOCPUA10"/>
-         <value>disabled</value>
+         <value>enabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="IOCPUA" settingAlias="IOCPUA11"/>
@@ -6424,7 +6433,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="IOCPUA" settingAlias="IOCPUA7"/>
-         <value>disabled</value>
+         <value>enabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="IOCPUA" settingAlias="IOCPUA8"/>
@@ -8825,12 +8834,12 @@
    </tokenMap>
    <generatedFileHashHistoryMap class="java.util.HashMap">
       <entry>
-         <file>mcc_generated_files\mcc.h</file>
-         <hash>8af7c361848e90e54bfa3840765401f4560b261581ad909d4c47540bb7a05e01</hash>
-      </entry>
-      <entry>
          <file>mcc_generated_files\interrupt_manager.h</file>
          <hash>fc42d5f3870bd29b6a5cd4426ff40fcc87d79799988bd58c414fa69340f2086a</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\mcc.h</file>
+         <hash>b31bd69867ce3938c8f206e8ef25c2b9c34e48f703beec5089f940234ac39fb1</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\clock.c</file>
@@ -8846,7 +8855,11 @@
       </entry>
       <entry>
          <file>mcc_generated_files\pin_manager.h</file>
-         <hash>7f149bc2f7f50af6b81b5ce3643ec7cd047f318ad8411c25127177203e7b8019</hash>
+         <hash>fc2604ed4878cc4e28f79460519bfe4bb0e9fdc48282bf554b66c5f96c8a84a6</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\system.h</file>
+         <hash>0b881574082bcd1da33b74a769fdabb74716669067254dfb0ef24002c6353f9e</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\spi1.c</file>
@@ -8854,35 +8867,31 @@
       </entry>
       <entry>
          <file>mcc_generated_files\pin_manager.c</file>
-         <hash>c997756513c364ca4e708c819619a652f6d0f0d099aaf0715e0e2c893974d785</hash>
-      </entry>
-      <entry>
-         <file>mcc_generated_files\system.h</file>
-         <hash>0b881574082bcd1da33b74a769fdabb74716669067254dfb0ef24002c6353f9e</hash>
+         <hash>d857c5b94c3875c4454161d87dea4262ae0b877b8b833b4984b8d4fc0e66255d</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\system.c</file>
-         <hash>6a37f21d6da5c173ccba26a1ccabb63ddee79daff8cb82987d0a92acdea93877</hash>
+         <hash>d3b0482ac88d31d3016cc7dc3203a17ff9a05bbf9e3817adb5de0ec43f8e1cc0</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\traps.c</file>
          <hash>40818c7fe8f523dbef2f726934715c1ca69b95a47b5263d22665e9fb42d28296</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files\clock.h</file>
-         <hash>e8f793badf3d2e5cf0a224f07fca153f19c4a3975611a5f0166dbe1af17ccfa7</hash>
-      </entry>
-      <entry>
          <file>mcc_generated_files\traps.h</file>
          <hash>14421be378361b46d1910324a558e66f8da5fb9752bf3beaafe6c8fdd90cbce9</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files\mcc.c</file>
-         <hash>e798306563944fb0b69e8e7c4dfd0d3fb3916f941dbd3ea0047ab27256ed3373</hash>
+         <file>mcc_generated_files\clock.h</file>
+         <hash>e8f793badf3d2e5cf0a224f07fca153f19c4a3975611a5f0166dbe1af17ccfa7</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\interrupt_manager.c</file>
          <hash>ba7e8f8ca835df5a9b1319ef5d438635ca6468beb30e1c1318ebd895a95aace5</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\mcc.c</file>
+         <hash>e798306563944fb0b69e8e7c4dfd0d3fb3916f941dbd3ea0047ab27256ed3373</hash>
       </entry>
    </generatedFileHashHistoryMap>
 </config>

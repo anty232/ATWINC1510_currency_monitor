@@ -348,6 +348,298 @@
 #define SCK1OUT_SetDigitalOutput() (_TRISA1 = 0)
 /**
   @Summary
+    Sets the GPIO pin, RA10, high using LATA10.
+
+  @Description
+    Sets the GPIO pin, RA10, high using LATA10.
+
+  @Preconditions
+    The RA10 must be set to an output.
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    <code>
+    // Set RA10 high (1)
+    SW_1_SetHigh();
+    </code>
+
+*/
+#define SW_1_SetHigh()          (_LATA10 = 1)
+/**
+  @Summary
+    Sets the GPIO pin, RA10, low using LATA10.
+
+  @Description
+    Sets the GPIO pin, RA10, low using LATA10.
+
+  @Preconditions
+    The RA10 must be set to an output.
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    <code>
+    // Set RA10 low (0)
+    SW_1_SetLow();
+    </code>
+
+*/
+#define SW_1_SetLow()           (_LATA10 = 0)
+/**
+  @Summary
+    Toggles the GPIO pin, RA10, using LATA10.
+
+  @Description
+    Toggles the GPIO pin, RA10, using LATA10.
+
+  @Preconditions
+    The RA10 must be set to an output.
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    <code>
+    // Toggle RA10
+    SW_1_Toggle();
+    </code>
+
+*/
+#define SW_1_Toggle()           (_LATA10 ^= 1)
+/**
+  @Summary
+    Reads the value of the GPIO pin, RA10.
+
+  @Description
+    Reads the value of the GPIO pin, RA10.
+
+  @Preconditions
+    None.
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    <code>
+    uint16_t portValue;
+
+    // Read RA10
+    postValue = SW_1_GetValue();
+    </code>
+
+*/
+#define SW_1_GetValue()         _RA10
+/**
+  @Summary
+    Configures the GPIO pin, RA10, as an input.
+
+  @Description
+    Configures the GPIO pin, RA10, as an input.
+
+  @Preconditions
+    None.
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    <code>
+    // Sets the RA10 as an input
+    SW_1_SetDigitalInput();
+    </code>
+
+*/
+#define SW_1_SetDigitalInput()  (_TRISA10 = 1)
+/**
+  @Summary
+    Configures the GPIO pin, RA10, as an output.
+
+  @Description
+    Configures the GPIO pin, RA10, as an output.
+
+  @Preconditions
+    None.
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    <code>
+    // Sets the RA10 as an output
+    SW_1_SetDigitalOutput();
+    </code>
+
+*/
+#define SW_1_SetDigitalOutput() (_TRISA10 = 0)
+/**
+  @Summary
+    Sets the GPIO pin, RA7, high using LATA7.
+
+  @Description
+    Sets the GPIO pin, RA7, high using LATA7.
+
+  @Preconditions
+    The RA7 must be set to an output.
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    <code>
+    // Set RA7 high (1)
+    SW_0_SetHigh();
+    </code>
+
+*/
+#define SW_0_SetHigh()          (_LATA7 = 1)
+/**
+  @Summary
+    Sets the GPIO pin, RA7, low using LATA7.
+
+  @Description
+    Sets the GPIO pin, RA7, low using LATA7.
+
+  @Preconditions
+    The RA7 must be set to an output.
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    <code>
+    // Set RA7 low (0)
+    SW_0_SetLow();
+    </code>
+
+*/
+#define SW_0_SetLow()           (_LATA7 = 0)
+/**
+  @Summary
+    Toggles the GPIO pin, RA7, using LATA7.
+
+  @Description
+    Toggles the GPIO pin, RA7, using LATA7.
+
+  @Preconditions
+    The RA7 must be set to an output.
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    <code>
+    // Toggle RA7
+    SW_0_Toggle();
+    </code>
+
+*/
+#define SW_0_Toggle()           (_LATA7 ^= 1)
+/**
+  @Summary
+    Reads the value of the GPIO pin, RA7.
+
+  @Description
+    Reads the value of the GPIO pin, RA7.
+
+  @Preconditions
+    None.
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    <code>
+    uint16_t portValue;
+
+    // Read RA7
+    postValue = SW_0_GetValue();
+    </code>
+
+*/
+#define SW_0_GetValue()         _RA7
+/**
+  @Summary
+    Configures the GPIO pin, RA7, as an input.
+
+  @Description
+    Configures the GPIO pin, RA7, as an input.
+
+  @Preconditions
+    None.
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    <code>
+    // Sets the RA7 as an input
+    SW_0_SetDigitalInput();
+    </code>
+
+*/
+#define SW_0_SetDigitalInput()  (_TRISA7 = 1)
+/**
+  @Summary
+    Configures the GPIO pin, RA7, as an output.
+
+  @Description
+    Configures the GPIO pin, RA7, as an output.
+
+  @Preconditions
+    None.
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    <code>
+    // Sets the RA7 as an output
+    SW_0_SetDigitalOutput();
+    </code>
+
+*/
+#define SW_0_SetDigitalOutput() (_TRISA7 = 0)
+/**
+  @Summary
     Sets the GPIO pin, RB0, high using LATB0.
 
   @Description
