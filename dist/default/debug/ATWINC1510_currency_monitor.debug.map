@@ -4,13 +4,13 @@ Tool Name:
   c:\spb_data\bin\bin\..\bin/elf-ld.exe
 
 Command:
-  -TC:\\Users\\Wojtek\\AppData\\Local\\Temp\\tmp00000dcc.00 \
-  -TC:\\Users\\Wojtek\\AppData\\Local\\Temp\\tmp00000dcc.01 \
-  -TC:\\Users\\Wojtek\\AppData\\Local\\Temp\\tmp00000dcc.02 \
-  -TC:\\Users\\Wojtek\\AppData\\Local\\Temp\\tmp00000dcc.03 \
-  -TC:\\Users\\Wojtek\\AppData\\Local\\Temp\\tmp00000dcc.04 \
-  -TC:\\Users\\Wojtek\\AppData\\Local\\Temp\\tmp00000dcc.05 \
-  -TC:\\Users\\Wojtek\\AppData\\Local\\Temp\\tmp00000dcc.06 \
+  -TC:\\Users\\Wojtek\\AppData\\Local\\Temp\\tmp0000311c.00 \
+  -TC:\\Users\\Wojtek\\AppData\\Local\\Temp\\tmp0000311c.01 \
+  -TC:\\Users\\Wojtek\\AppData\\Local\\Temp\\tmp0000311c.02 \
+  -TC:\\Users\\Wojtek\\AppData\\Local\\Temp\\tmp0000311c.03 \
+  -TC:\\Users\\Wojtek\\AppData\\Local\\Temp\\tmp0000311c.04 \
+  -TC:\\Users\\Wojtek\\AppData\\Local\\Temp\\tmp0000311c.05 \
+  -TC:\\Users\\Wojtek\\AppData\\Local\\Temp\\tmp0000311c.06 \
   -p24FJ128GA705 \
   --mdfp=D:/Program Files/packs/Microchip/PIC24F-GA-GB_DFP/1.9.336/xc16 \
   -o \
@@ -109,11 +109,11 @@ section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
 .text                        0x100               0x1dc           0x2ca  (714)
 .const                       0x2dc               0xab6          0x1011  (4113)
-.text                        0xd92              0x14b0          0x1f08  (7944)
-.dinit                      0x2242                0x7c            0xba  (186)
-.text                       0x22be                0x74            0xae  (174)
+.text                        0xd92              0x14bc          0x1f1a  (7962)
+.dinit                      0x224e                0x7c            0xba  (186)
+.text                       0x22ca                0x74            0xae  (174)
 
-                 Total "program" memory used (bytes):         0x334b  (13131) 9%
+                 Total "program" memory used (bytes):         0x335d  (13149) 9%
 
 
 "data" Memory  [Origin = 0x800, Length = 0x4000]
@@ -271,31 +271,31 @@ External Symbols in Program Memory (by address):
                   0x002002                  _GetButton
                   0x002080                  _StateMachine
                   0x0020ee                  _main
-                  0x002110                  _DrawGreenArrow
-                  0x00212c                  _DrawRedArrow
-                  0x002148                  _DrawPage
-                  0x0021bc                  _PIN_MANAGER_Initialize
-                  0x0022be                  _CLOCK_Initialize
-                  0x00231e                  _SYSTEM_Initialize
-                  0x00232c                  _INTERRUPT_Initialize
+                  0x00211c                  _DrawGreenArrow
+                  0x002138                  _DrawRedArrow
+                  0x002154                  _DrawPage
+                  0x0021c8                  _PIN_MANAGER_Initialize
+                  0x0022ca                  _CLOCK_Initialize
+                  0x00232a                  _SYSTEM_Initialize
+                  0x002338                  _INTERRUPT_Initialize
                   0x015f00                  __FSEC.sec
 
 External Symbols in Program Memory (by name):
 
-                  0x0022be                  _CLOCK_Initialize
-                  0x002110                  _DrawGreenArrow
-                  0x002148                  _DrawPage
-                  0x00212c                  _DrawRedArrow
+                  0x0022ca                  _CLOCK_Initialize
+                  0x00211c                  _DrawGreenArrow
+                  0x002154                  _DrawPage
+                  0x002138                  _DrawRedArrow
                   0x002002                  _GetButton
-                  0x00232c                  _INTERRUPT_Initialize
-                  0x0021bc                  _PIN_MANAGER_Initialize
+                  0x002338                  _INTERRUPT_Initialize
+                  0x0021c8                  _PIN_MANAGER_Initialize
                   0x001edc                  _SPI1_Exchange
                   0x001fd6                  _SPI1_Exchange8bit
                   0x001fe6                  _SPI1_Exchange8bitBuffer
                   0x001f0c                  _SPI1_ExchangeBuffer
                   0x001ec0                  _SPI1_Initialize
                   0x001ffa                  _SPI1_StatusGet
-                  0x00231e                  _SYSTEM_Initialize
+                  0x00232a                  _SYSTEM_Initialize
                   0x002080                  _StateMachine
                   0x000e2a                  _TFTBcmd
                   0x00103c                  _TFTBlackTabInitialize
@@ -530,7 +530,7 @@ __FDEVOPT1
  .debug_abbrev    0x00071b         0x81 build/default/debug/ST7735_TFT_Font.o
  .debug_abbrev    0x00079c         0x8f build/default/debug/display.o
 
-.debug_line       0x000000        0xb42
+.debug_line       0x000000        0xb43
  *(.debug_line)
  .debug_line      0x000000        0x108 build/default/debug/mcc_generated_files/pin_manager.o
  .debug_line      0x000108         0x55 build/default/debug/mcc_generated_files/interrupt_manager.o
@@ -539,10 +539,10 @@ __FDEVOPT1
  .debug_line      0x000386        0x150 build/default/debug/mcc_generated_files/traps.o
  .debug_line      0x0004d6         0x1a build/default/debug/mcc_generated_files/mcc.o
  .debug_line      0x0004f0        0x12b build/default/debug/mcc_generated_files/clock.o
- .debug_line      0x00061b        0x11e build/default/debug/main.o
- .debug_line      0x000739        0x35e build/default/debug/ST7735_TFT_BLACK.o
- .debug_line      0x000a97         0x2f build/default/debug/ST7735_TFT_Font.o
- .debug_line      0x000ac6         0x7c build/default/debug/display.o
+ .debug_line      0x00061b        0x11f build/default/debug/main.o
+ .debug_line      0x00073a        0x35e build/default/debug/ST7735_TFT_BLACK.o
+ .debug_line      0x000a98         0x2f build/default/debug/ST7735_TFT_Font.o
+ .debug_line      0x000ac7         0x7c build/default/debug/display.o
 
 .debug_frame      0x000000        0x718
  *(.debug_frame)
@@ -2217,7 +2217,7 @@ __c30_signature
  .const             0x82dc        0xa76 build/default/debug/ST7735_TFT_Font.o
  .const             0x8d52         0x40 build/default/debug/ST7735_TFT_BLACK.o
 
-.text             0x000d92       0x14b0
+.text             0x000d92       0x14bc
  .text            0x000d92       0x112e build/default/debug/ST7735_TFT_BLACK.o
                   0x000d92                  ___delay_ms
                   0x000dbe                  _TFTwriteData
@@ -2259,26 +2259,26 @@ __c30_signature
                   0x001fd6                  _SPI1_Exchange8bit
                   0x001fe6                  _SPI1_Exchange8bitBuffer
                   0x001ffa                  _SPI1_StatusGet
- .text            0x002002        0x10e build/default/debug/main.o
+ .text            0x002002        0x11a build/default/debug/main.o
                   0x002002                  _GetButton
                   0x002080                  _StateMachine
                   0x0020ee                  _main
- .text            0x002110         0xac build/default/debug/display.o
-                  0x002110                  _DrawGreenArrow
-                  0x00212c                  _DrawRedArrow
-                  0x002148                  _DrawPage
- .text            0x0021bc         0x86 build/default/debug/mcc_generated_files/pin_manager.o
-                  0x0021bc                  _PIN_MANAGER_Initialize
+ .text            0x00211c         0xac build/default/debug/display.o
+                  0x00211c                  _DrawGreenArrow
+                  0x002138                  _DrawRedArrow
+                  0x002154                  _DrawPage
+ .text            0x0021c8         0x86 build/default/debug/mcc_generated_files/pin_manager.o
+                  0x0021c8                  _PIN_MANAGER_Initialize
 
-.dinit            0x002242         0x7c
- .dinit           0x002242         0x7c data_init
+.dinit            0x00224e         0x7c
+ .dinit           0x00224e         0x7c data_init
 
-.text             0x0022be         0x74
- .text            0x0022be         0x46 build/default/debug/mcc_generated_files/clock.o
-                  0x0022be                  _CLOCK_Initialize
- .text            0x002304         0x1a build/default/debug/mcc_generated_files/traps.o
-                  0x002304                  _TRAPS_halt_on_error
- .text            0x00231e          0xe build/default/debug/mcc_generated_files/system.o
-                  0x00231e                  _SYSTEM_Initialize
- .text            0x00232c          0x6 build/default/debug/mcc_generated_files/interrupt_manager.o
-                  0x00232c                  _INTERRUPT_Initialize
+.text             0x0022ca         0x74
+ .text            0x0022ca         0x46 build/default/debug/mcc_generated_files/clock.o
+                  0x0022ca                  _CLOCK_Initialize
+ .text            0x002310         0x1a build/default/debug/mcc_generated_files/traps.o
+                  0x002310                  _TRAPS_halt_on_error
+ .text            0x00232a          0xe build/default/debug/mcc_generated_files/system.o
+                  0x00232a                  _SYSTEM_Initialize
+ .text            0x002338          0x6 build/default/debug/mcc_generated_files/interrupt_manager.o
+                  0x002338                  _INTERRUPT_Initialize

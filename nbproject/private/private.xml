@@ -3,14 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/kslig/Desktop/Studia/Projekt_C/ATWINC1510_currency_monitor/ST7735_TFT_BLACK.c</file>
-            <file>file:/C:/Users/kslig/Desktop/Studia/Projekt_C/ATWINC1510_currency_monitor/display.c</file>
-            <file>file:/C:/Users/kslig/Desktop/Studia/Projekt_C/ATWINC1510_currency_monitor/ST7735_TFT_Font.h</file>
-            <file>file:/C:/Users/kslig/Desktop/Studia/Projekt_C/ATWINC1510_currency_monitor/nbproject/Makefile-default.mk</file>
-            <file>file:/C:/Users/kslig/Desktop/Studia/Projekt_C/ATWINC1510_currency_monitor/ST7735_TFT_BLACK.h</file>
-            <file>file:/C:/Users/kslig/Desktop/Studia/Projekt_C/ATWINC1510_currency_monitor/display.h</file>
-            <file>file:/C:/Users/kslig/Desktop/Studia/Projekt_C/ATWINC1510_currency_monitor/nbproject/Makefile-impl.mk</file>
-            <file>file:/C:/Users/kslig/Desktop/Studia/Projekt_C/ATWINC1510_currency_monitor/main.c</file>
+            <file>file:/D:/Zadania/Studia/3%20Rok/Mikrochip/Projekt/ATWINC1510_currency_monitor/mcc_generated_files/pin_manager.c</file>
+            <file>file:/D:/Zadania/Studia/3%20Rok/Mikrochip/Projekt/ATWINC1510_currency_monitor/mcc_generated_files/spi1.c</file>
+            <file>file:/D:/Zadania/Studia/3%20Rok/Mikrochip/Projekt/ATWINC1510_currency_monitor/ST7735_TFT_BLACK.h</file>
+            <file>file:/D:/Zadania/Studia/3%20Rok/Mikrochip/Projekt/ATWINC1510_currency_monitor/ST7735_TFT_BLACK.c</file>
+            <file>file:/D:/Zadania/Studia/3%20Rok/Mikrochip/Projekt/ATWINC1510_currency_monitor/main.c</file>
+            <file>file:/D:/Zadania/Studia/3%20Rok/Mikrochip/Projekt/ATWINC1510_currency_monitor/mcc_generated_files/pin_manager.h</file>
         </group>
     </open-files>
 </project-private>
