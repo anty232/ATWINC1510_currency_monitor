@@ -1078,6 +1078,152 @@
 #define RST_RB15_SetDigitalOutput() (_TRISB15 = 0)
 /**
   @Summary
+    Sets the GPIO pin, RB4, high using LATB4.
+
+  @Description
+    Sets the GPIO pin, RB4, high using LATB4.
+
+  @Preconditions
+    The RB4 must be set to an output.
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    <code>
+    // Set RB4 high (1)
+    LED_RED_SetHigh();
+    </code>
+
+*/
+#define LED_RED_SetHigh()          (_LATB4 = 1)
+/**
+  @Summary
+    Sets the GPIO pin, RB4, low using LATB4.
+
+  @Description
+    Sets the GPIO pin, RB4, low using LATB4.
+
+  @Preconditions
+    The RB4 must be set to an output.
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    <code>
+    // Set RB4 low (0)
+    LED_RED_SetLow();
+    </code>
+
+*/
+#define LED_RED_SetLow()           (_LATB4 = 0)
+/**
+  @Summary
+    Toggles the GPIO pin, RB4, using LATB4.
+
+  @Description
+    Toggles the GPIO pin, RB4, using LATB4.
+
+  @Preconditions
+    The RB4 must be set to an output.
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    <code>
+    // Toggle RB4
+    LED_RED_Toggle();
+    </code>
+
+*/
+#define LED_RED_Toggle()           (_LATB4 ^= 1)
+/**
+  @Summary
+    Reads the value of the GPIO pin, RB4.
+
+  @Description
+    Reads the value of the GPIO pin, RB4.
+
+  @Preconditions
+    None.
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    <code>
+    uint16_t portValue;
+
+    // Read RB4
+    postValue = LED_RED_GetValue();
+    </code>
+
+*/
+#define LED_RED_GetValue()         _RB4
+/**
+  @Summary
+    Configures the GPIO pin, RB4, as an input.
+
+  @Description
+    Configures the GPIO pin, RB4, as an input.
+
+  @Preconditions
+    None.
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    <code>
+    // Sets the RB4 as an input
+    LED_RED_SetDigitalInput();
+    </code>
+
+*/
+#define LED_RED_SetDigitalInput()  (_TRISB4 = 1)
+/**
+  @Summary
+    Configures the GPIO pin, RB4, as an output.
+
+  @Description
+    Configures the GPIO pin, RB4, as an output.
+
+  @Preconditions
+    None.
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    <code>
+    // Sets the RB4 as an output
+    LED_RED_SetDigitalOutput();
+    </code>
+
+*/
+#define LED_RED_SetDigitalOutput() (_TRISB4 = 0)
+/**
+  @Summary
     Sets the GPIO pin, RB5, high using LATB5.
 
   @Description

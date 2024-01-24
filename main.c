@@ -10,10 +10,14 @@
 	uint8_t TFT_PIXEL_WIDTH = 128;// Screen width in pixels
 	uint8_t TFT_PIXEL_HEIGHT = 160; // Screen height in pixels
    
-    char text[] = "USD=4,02";
+    char text[]  = "USD=4,02";
     char text1[] = "EUR=4,34";
     char text2[] = "GBP=4,99";
     char text3[] = "CZK=0,18";
+    char text4[] = "INR=0,04";
+    char text5[] = "BGN=2,24";
+    char text6[] = "MXN=0,23";
+    char text7[] = "NPR=0,03";
     
     uint8_t State =0;
 
@@ -35,7 +39,7 @@
                 __delay_ms(10);
             if(SW_1_GetValue()==0){
                 State++;
-                State = State %4;
+                State = State %2;
                 while(SW_1_GetValue()==0){
                     Nop();
                 }
@@ -60,13 +64,7 @@
                     DrawPage(ST7735_CYAN, text, text1, text2, text3);
                     break;
                 case 1:
-                    DrawPage(ST7735_CYAN, text1, text2, text3, text);
-                    break;
-                case 2:          
-                    DrawPage(ST7735_CYAN, text2, text3, text, text1);
-                    break;
-                case 3:
-                    DrawPage(ST7735_CYAN, text3, text, text1, text2);
+                    DrawPage(ST7735_CYAN, text4, text5, text6, text7);
                     break;
                 default:
                     break;
@@ -83,6 +81,7 @@ int main(void)
     SYSTEM_Initialize();
     TFTBlackTabInitialize();
     TFTFontNum(TFTFont_Default);
+    TMR1_Start();
    
 	TFTInitScreenSize(OFFSET_COL, OFFSET_ROW , TFT_PIXEL_WIDTH  , TFT_PIXEL_HEIGHT);
     TFTfillScreen(ST7735_BLACK);
