@@ -3,14 +3,20 @@
 #include "mcc_generated_files/spi1.h"
 #include "ST7735_TFT_BLACK.h"
 #include "display.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <xc.h>
+#include "API_Decoder.h"
 
-   
+
     uint8_t OFFSET_COL = 2;  // 2, These offsets can be adjusted for any issues->
 	uint8_t OFFSET_ROW = 1 ; // 3, with manufacture tolerance/defects
 	uint8_t TFT_PIXEL_WIDTH = 128;// Screen width in pixels
 	uint8_t TFT_PIXEL_HEIGHT = 160; // Screen height in pixels
-   
-    char text[]  = "USD=4,02";
+    int i =9;
+    char resoult[9];
+    char text[9];
     char text1[] = "EUR=4,34";
     char text2[] = "GBP=4,99";
     char text3[] = "CZK=0,18";
@@ -18,7 +24,8 @@
     char text5[] = "BGN=2,24";
     char text6[] = "MXN=0,23";
     char text7[] = "NPR=0,03";
-    
+    //snprintf(resoult, sizeof(resoult), "%s=%s", "USD", CurrencyValue("USD"));
+    sizeof(text);
     uint8_t State =0;
 
     void GetButton(void){
