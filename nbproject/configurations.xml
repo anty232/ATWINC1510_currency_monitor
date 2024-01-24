@@ -19,7 +19,6 @@
       <itemPath>ST7735_TFT_BLACK.h</itemPath>
       <itemPath>ST7735_TFT_Font.h</itemPath>
       <itemPath>display.h</itemPath>
-      <itemPath>API_Decoder.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -44,7 +43,6 @@
       <itemPath>ST7735_TFT_BLACK.c</itemPath>
       <itemPath>ST7735_TFT_Font.c</itemPath>
       <itemPath>display.c</itemPath>
-      <itemPath>API_Decoder.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -52,6 +50,8 @@
       <itemPath>Makefile</itemPath>
       <itemPath>Waluty.mc3</itemPath>
     </logicalFolder>
+    <itemPath>API_Decoder.c</itemPath>
+    <itemPath>API_Decoder.h</itemPath>
   </logicalFolder>
   <sourceRootList>
     <Elem>C:\Users\user\Desktop\Studia\Semestr5\Aplikacje_Mikrokontrolerow\ATWINC1510_currency_monitor\mcc_generated_files</Elem>

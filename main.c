@@ -24,8 +24,8 @@
     char text5[] = "BGN=2,24";
     char text6[] = "MXN=0,23";
     char text7[] = "NPR=0,03";
-    //snprintf(resoult, sizeof(resoult), "%s=%s", "USD", CurrencyValue("USD"));
-    sizeof(text);
+    //snprintf(text, "%s = %s", "USD", CurrencyValue("USD"));
+    //sizeof(text);
     uint8_t State =0;
 
     void GetButton(void){
@@ -88,7 +88,7 @@ int main(void)
     SYSTEM_Initialize();
     TFTBlackTabInitialize();
     TFTFontNum(TFTFont_Default);
-    TMR1_Start();
+    snprintf(text, sizeof(text), "%s=%s", "HKD", CurrencyValue("HKD"));
    
 	TFTInitScreenSize(OFFSET_COL, OFFSET_ROW , TFT_PIXEL_WIDTH  , TFT_PIXEL_HEIGHT);
     TFTfillScreen(ST7735_BLACK);
