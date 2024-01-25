@@ -16,6 +16,7 @@
 	uint8_t TFT_PIXEL_HEIGHT = 160; // Screen height in pixels
     int i =9;
     char resoult[9];
+    char Test[9];
     char text[9];
     char text1[] = "EUR=4,34";
     char text2[] = "GBP=4,99";
@@ -88,7 +89,39 @@ int main(void)
     SYSTEM_Initialize();
     TFTBlackTabInitialize();
     TFTFontNum(TFTFont_Default);
-    snprintf(text, sizeof(text), "%s=%s", "HKD", CurrencyValue("HKD"));
+    //snprintf(text, sizeof(text), "%s=%s", "HKD", CurrencyValue("HKD"));
+    
+    snprintf(Test, sizeof(Test), "%s=%s","USD", CurrencyValue("USD"));
+    strncpy(text, Test, sizeof(text) - 1);
+    text[sizeof(text) - 1] = '\0';
+    
+    snprintf(Test, sizeof(Test), "%s=%s","EUR", CurrencyValue("EUR"));
+    strncpy(text1, Test, sizeof(text1) - 1);
+    text[sizeof(text1) - 1] = '\0';
+    
+    snprintf(Test, sizeof(Test), "%s=%s","GBP", CurrencyValue("GBP"));
+    strncpy(text2, Test, sizeof(text2) - 1);
+    text[sizeof(text2) - 1] = '\0';
+    
+    snprintf(Test, sizeof(Test), "%s=%s","CZK", CurrencyValue("CZK"));
+    strncpy(text3, Test, sizeof(text3) - 1);
+    text[sizeof(text3) - 1] = '\0';
+    
+    snprintf(Test, sizeof(Test), "%s=%s","INR", CurrencyValue("INR"));
+    strncpy(text4, Test, sizeof(text4) - 1);
+    text[sizeof(text4) - 1] = '\0';
+    
+    snprintf(Test, sizeof(Test), "%s=%s","BGN", CurrencyValue("BGN"));
+    strncpy(text5, Test, sizeof(text5) - 1);
+    text[sizeof(text5) - 1] = '\0';
+    
+    snprintf(Test, sizeof(Test), "%s=%s","MXN", CurrencyValue("MXN"));
+    strncpy(text6, Test, sizeof(text6) - 1);
+    text[sizeof(text6) - 1] = '\0';
+    
+    snprintf(Test, sizeof(Test), "%s=%s","NPR", CurrencyValue("NPR"));
+    strncpy(text7, Test, sizeof(text7) - 1);
+    text[sizeof(text7) - 1] = '\0';
    
 	TFTInitScreenSize(OFFSET_COL, OFFSET_ROW , TFT_PIXEL_WIDTH  , TFT_PIXEL_HEIGHT);
     TFTfillScreen(ST7735_BLACK);
