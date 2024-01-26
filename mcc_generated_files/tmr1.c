@@ -50,6 +50,7 @@
 #include <stdio.h>
 #include "tmr1.h"
 #include "pin_manager.h"
+
 /**
  Section: File specific functions
 */
@@ -162,6 +163,7 @@ void __attribute__ ((weak)) TMR1_CallBack(void)
     // Add your custom callback code here
     if(ClockValue==1200){
         LED_RED_Toggle();
+        //UbdateValue();
         ClockValue=0;
     }
     else{
