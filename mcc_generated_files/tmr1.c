@@ -161,9 +161,9 @@ int ClockValue=0;
 void __attribute__ ((weak)) TMR1_CallBack(void)
 {
     // Add your custom callback code here
-    if(ClockValue==1200){
+    if(ClockValue==20){
         LED_RED_Toggle();
-        //UbdateValue();
+        UbdateValue();
         ClockValue=0;
     }
     else{

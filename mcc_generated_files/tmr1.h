@@ -52,7 +52,7 @@
 #include <xc.h>
 #include <stdint.h>
 #include <stdbool.h>
-
+#include "../API_Decoder.h"
 #ifdef __cplusplus  // Provide C++ Compatibility
 
     extern "C" {
