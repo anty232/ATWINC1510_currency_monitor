@@ -93,10 +93,10 @@ void TMR1_Initialize (void)
 {
     //TMR1 0; 
     TMR1 = 0x00;
-    //Period = 3 s; Frequency = 4000000 Hz; PR1 46874; 
-    PR1 = 0xB71A;
-    //TCKPS 1:256; TON enabled; TSIDL disabled; TCS FOSC/2; TECS SOSC; TSYNC enabled; TGATE disabled; 
-    T1CON = 0x8034;
+    //Period = 0.1 s; Frequency = 4000000 Hz; PR1 49999; 
+    PR1 = 0xC34F;
+    //TCKPS 1:8; TON enabled; TSIDL disabled; TCS FOSC/2; TECS SOSC; TSYNC enabled; TGATE disabled; 
+    T1CON = 0x8014;
 
     if(TMR1_InterruptHandler == NULL)
     {
@@ -162,13 +162,14 @@ void __attribute__ ((weak)) TMR1_CallBack(void)
 {
     // Add your custom callback code here
     StateMachine();
-    if(ClockValue==20){
-        LED_RED_Toggle();
+    if(ClockValue==3600){
+        LED_RED_SetLow();
         UbdateValue();
         ClockValue=0;
     }
     else{
         ClockValue++;
+        LED_RED_SetHigh();
     }
     
 }

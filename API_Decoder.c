@@ -176,7 +176,6 @@ void UbdateValue(void){
     strncpy(text31, Test, sizeof(text31) - 1);
     text31[sizeof(text31) - 1] = '\0';
     
-    
     DrawPage(ST7735_CYAN, text, text1, text2, text3);
 }
 

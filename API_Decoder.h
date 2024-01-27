@@ -7,7 +7,6 @@
 #include "mcc_generated_files/pin_manager.h"
 #include "display.h"
 
-
 char *CurrencyValue(const char *);
 
 void UbdateValue(void);
