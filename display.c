@@ -5,6 +5,10 @@
 char title[] = "currency  rates";
 char info[] = "press button to swipe";
 
+uint8_t OFFSET_COL = 2;  // 2, These offsets can be adjusted for any issues->
+uint8_t OFFSET_ROW = 1 ; // 3, with manufacture tolerance/defects
+uint8_t TFT_PIXEL_WIDTH = 128;// Screen width in pixels
+uint8_t TFT_PIXEL_HEIGHT = 160; // Screen height in pixels
 
 void DrawGreenArrow (int16_t y){
     TFTfillTriangle(110, y, 120 , y, 115, y-10, ST7735_GREEN);
@@ -27,7 +31,14 @@ void DrawPage(uint16_t text_color, char *text, char *text1, char *text2, char *t
     TFTdrawText(0, 140, info, ST7735_GREEN, ST7735_BLACK, 1);
 }
     
+void StartScreen(void){
     
+    TFTBlackTabInitialize();
+    TFTFontNum(TFTFont_Default);
+	TFTInitScreenSize(OFFSET_COL, OFFSET_ROW , TFT_PIXEL_WIDTH  , TFT_PIXEL_HEIGHT);
+    TFTfillScreen(ST7735_BLACK);
+   
+}
     
 
 

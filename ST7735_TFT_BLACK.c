@@ -21,6 +21,7 @@ uint8_t _heightTFT;
 uint8_t _widthStartTFT; //  never change after first init
 uint8_t _heightStartTFT; // never change after first init
 
+
 void __delay_ms(uint16_t ms){
     
     for (int i = 0; i < ms ; i++){
@@ -641,3 +642,4 @@ void TFTFontNum(ST7735_FontType_e FontNumber) {
             break; //homespun 7 by 8 
     }
 }
+
