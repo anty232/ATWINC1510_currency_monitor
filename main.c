@@ -9,6 +9,8 @@ int main(void)
     // initialize the device
     SYSTEM_Initialize();
     StartScreen();
+    UbdateValue("THB", "USD", "AUD", "HKD"); 
+    DrawPage(ST7735_CYAN, text, text1, text2, text3);
     
     while (1)
     {   
