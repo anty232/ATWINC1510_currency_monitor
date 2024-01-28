@@ -11,6 +11,6 @@ char *CurrencyValue(const char *);
 
 void UbdateValue(const char [3], const char [3], const char [3], const char [3]);
 void StateMachine(void);
- 
+void API_Inicialize(void);
 
 #endif

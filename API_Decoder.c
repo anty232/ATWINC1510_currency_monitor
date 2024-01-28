@@ -116,5 +116,10 @@ void UbdateValue(const char nazwa1[3], const char nazwa2[3], const char nazwa3[3
             
         }
     }
+    
+void API_Inicialize(void){
+    UbdateValue("THB", "USD", "AUD", "HKD"); 
+    DrawPage(ST7735_CYAN, text, text1, text2, text3);
+}
 
  
