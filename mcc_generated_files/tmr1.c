@@ -164,7 +164,6 @@ void __attribute__ ((weak)) TMR1_CallBack(void)
     StateMachine();
     if(ClockValue==3600){
         LED_RED_SetLow();
-        UbdateValue();
         ClockValue=0;
     }
     else{

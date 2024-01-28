@@ -9,7 +9,6 @@ int main(void)
     // initialize the device
     SYSTEM_Initialize();
     StartScreen();
-    UbdateValue();
     
     while (1)
     {   

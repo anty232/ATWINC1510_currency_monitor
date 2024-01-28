@@ -9,7 +9,7 @@
 
 char *CurrencyValue(const char *);
 
-void UbdateValue(void);
+void UbdateValue(const char [3], const char [3], const char [3], const char [3]);
 void StateMachine(void);
  
 
