@@ -87,7 +87,7 @@ void UbdateValue(const char nazwa1[3], const char nazwa2[3], const char nazwa3[3
                     DrawPage(ST7735_CYAN, text, text1, text2, text3);
                     break;
                 case 3:
-                    UbdateValue("JYP", "CZK", "DKK", "ISK"); 
+                    UbdateValue("JPY", "CZK", "DKK", "ISK"); 
                     DrawPage(ST7735_CYAN, text, text1, text2, text3);
                     break;
                 case 4:
